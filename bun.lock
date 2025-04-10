@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "agency-landing-page",
+      "name": "agency-v0",
       "dependencies": {
         "@tabler/icons-react": "^3.31.0",
         "clsx": "^2.1.1",

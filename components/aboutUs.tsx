@@ -9,7 +9,6 @@ export default function AboutUs() {
 			id='about'
 			className='relative py-24 sm:py-32 overflow-hidden container mx-auto'
 		>
-			
 			{/* Grid Background Pattern */}
 			<div className='absolute inset-0 bg-black'>
 				<div
