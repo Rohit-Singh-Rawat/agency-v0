@@ -47,7 +47,6 @@ const NavBar = () => {
 				>
 					<IconMenu size={24} />
 				</button>
-				<div></div>
 			</div>
 
 			{/* Mobile navigation */}
