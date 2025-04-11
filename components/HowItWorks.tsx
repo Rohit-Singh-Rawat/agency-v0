@@ -52,19 +52,17 @@ const HowItWorks = () => {
 						{steps.map((step, index) => (
 							<div
 								key={index}
-								className='relative animate-fade-in glass-card p-8  shadow-lg border-2 border-blue-200/10'
+								className='relative animate-fade-in glass-card p-8  shadow-lg border-2 border-blue-300/20'
 								style={{ animationDelay: `${index * 0.1}s` }}
 							>
-								<div className='absolute -top-4 -left-4 text-5xl  font-black text-blue-200/20 bg-black'>
+								<div className='absolute -top-4 -left-4 text-5xl  font-black text-blue-300/30 bg-black'>
 									{step.number}
 								</div>
 								<div className='relative z-10'>
-									<h3 className='text-xl font-semibold mb-3 text-primary'>{step.title}</h3>
+									<h3 className='text-xl font-semibold mb-3 text-blue-400'>{step.title}</h3>
 									<p className='text-foreground/60'>{step.description}</p>
 								</div>
-								{index < steps.length - 1 && (
-									<div className='hidden lg:block absolute top-1/2 -right-4 w-8 h-[2px] bg-accent'></div>
-								)}
+								
 							</div>
 						))}
 					</div>

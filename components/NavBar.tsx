@@ -16,7 +16,7 @@ const NavBar = () => {
 
 	return (
 		<header className='bg-background/10 backdrop-blur-sm border-b border-border p-4 z-50 fixed w-full top-0'>
-			<div className='container mx-auto flex justify-between items-center'>
+			<div className='container  flex justify-between items-center'>
 				<Link
 					href='/'
 					className='font-bold text-lg'
@@ -47,11 +47,12 @@ const NavBar = () => {
 				>
 					<IconMenu size={24} />
 				</button>
+				<div></div>
 			</div>
 
 			{/* Mobile navigation */}
 			{isMenuOpen && (
-				<div className='md:hidden py-4 space-y-4 flex flex-col items-center bg-background/95 backdrop-blur-xl mt-4 rounded-lg border border-white/10'>
+				<div className=' px-4 md:hidden py-4 space-y-4 flex flex-col items-center bg-background/95 backdrop-blur-xl mt-4 rounded-lg border border-white/10'>
 					{navLinks.map(({ href, label }) => (
 						<Link
 							key={href}
