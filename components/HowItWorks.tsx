@@ -1,38 +1,38 @@
 import { cn } from '@/lib/utils';
 import { GridPattern } from './grid';
-import { IconRocket, IconPlug, IconCpu } from '@tabler/icons-react';
+import {  IconPlugConnected, IconDeviceDesktop, IconPackage } from '@tabler/icons-react';
 
 const features = [
 	{
 		icon: (
-			<IconRocket
+			<IconPackage
 				size={44}
-				stroke={1.5}
+				stroke={1}
 			/>
 		),
-		title: '💼 MVP Package',
+		title: ' MVP Package',
 		description:
 			'Everything you need — web app, landing page, and SEO-ready content — built to launch fast.',
 	},
 	{
 		icon: (
-			<IconPlug
+			<IconPlugConnected
 				size={44}
-				stroke={1.5}
+				stroke={1}
 			/>
 		),
-		title: '🔌 Integrations',
+		title: ' Integrations',
 		description:
 			"We connect payments, logins, emails & more — so you're launch-ready from day one.",
 	},
 	{
 		icon: (
-			<IconCpu
+			<IconDeviceDesktop
 				size={44}
-				stroke={1.5}
+				stroke={1}
 			/>
 		),
-		title: '🧠 Modern Stack',
+		title: ' Modern Stack',
 		description: 'Powered by the latest tech and AI to ensure speed, stability, and scalability.',
 	},
 ];
@@ -64,13 +64,12 @@ const HowItWorks = () => {
 			<div className='mb-16 text-left'>
 				<h2 className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
 					How It Works{' '}
-					<span className='bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-transparent bg-clip-text'>
+					<span className='bg-gradient-to-r from-[#FF8800] to-[#FFC107] text-transparent bg-clip-text'>
 						For Your Success
 					</span>
 				</h2>
 				<p className='text-lg leading-7 text-gray-300 '>
-					We supercharge your idea with lightning-fast MVP development. From concept to market-ready 
-					product in just five weeks — helping you outpace competitors in today&apos;s fast-moving tech landscape.
+					At LaunchPad Labs, we <span className="text-blue-400">light up your ideas</span> with <span className="text-blue-400">lightning-fast MVP development</span>. We take your concept and transform it into a <span className="text-blue-400">market-ready</span> web or mobile product in <span className="text-blue-400">just five weeks</span> — so you can shine brighter than competitors in today&apos;s fast-moving tech world.
 				</p>
 			</div>
 

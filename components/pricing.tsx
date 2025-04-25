@@ -37,17 +37,17 @@ export default function Pricing() {
 			<div className='relative z-10'>
 				<div className='mb-10 sm:mb-16 text-center sm:text-left'>
 					<h2 className='text-3xl sm:text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
-						Accelerate Your{' '}
+						 Ready to Launch Your{' '}
 						<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
-							Vision
+							Idea?
 						</span>
 					</h2>
 					<p className='text-lg sm:text-xl leading-7 text-gray-300 max-w-2xl mx-auto sm:mx-0'>
-						Choose the package that fits your stage. From rapid MVPs to ongoing growth.
+						Choose the perfect package and start building today.
 					</p>
 				</div>
 
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-5xl mx-auto  sm:px-10'>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-5xl mx-auto sm:px-10'>
 					{pricingCards.map((card, index) => (
 						<PricingCard
 							key={index}
@@ -86,35 +86,36 @@ type PricingCardProps = {
 		text: string;
 		icon?: React.ReactNode;
 	}>;
+	limitedAvailability?: string;
 };
 
 const pricingCards: PricingCardProps[] = [
 	{
 		popular: true,
 		badge: {
-			text: 'Most Popular',
+			text: '⭐ Most Popular',
 			className: 'bg-blue-600 text-white',
 		},
 		icon: <></>,
 		tagline: {
-			text: 'One-time Package',
+			text: 'One-Time MVP Development',
 			className: 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/30',
 		},
 		title: 'MVP Development Package',
-		price: '$3497',
+		price: 'Starting at $2000',
 		subtitle: {
-			text: 'Fast, functional MVP to kickstart your product journey with confidence',
+			text: 'Complete MVP delivered in just 4–5 weeks',
 			className: 'text-indigo-300',
 		},
 		cta: {
-			text: 'Book a Call →',
+			text: 'Book Now',
 			className:
 				'bg-black border border-white/10 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-black/50 text-white',
 		},
 		featuresTitle: "What's Included:",
 		features: [
 			{
-				text: 'Complete MVP in 4-5 weeks',
+				text: 'Web application or mobile app — built to scale',
 				icon: (
 					<IconRocket
 						size={20}
@@ -124,7 +125,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Web or Mobile App development',
+				text: 'Modern, fast, and reliable tech stack',
 				icon: (
 					<IconBolt
 						size={20}
@@ -134,7 +135,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Modern, scalable tech stack',
+				text: 'Seamless integrations (payments, authentication, email, and more)',
 				icon: (
 					<IconStar
 						size={20}
@@ -144,17 +145,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Third-party integrations',
-				icon: (
-					<IconCheck
-						size={20}
-						stroke={2}
-						className='text-indigo-300'
-					/>
-				),
-			},
-			{
-				text: '30 days maintenance & bug fixes',
+				text: '30 days of free maintenance and support',
 				icon: (
 					<IconShield
 						size={20}
@@ -164,7 +155,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Founder-led development',
+				text: 'Founder-led development for personal attention',
 				icon: (
 					<IconHeartHandshake
 						size={20}
@@ -174,7 +165,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Regular progress updates',
+				text: 'Regular progress updates with full transparency',
 				icon: (
 					<IconChartBar
 						size={20}
@@ -184,33 +175,34 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 		],
+		limitedAvailability: 'Limited Availability: We only take 5 clients per month — secure your spot today!',
 	},
 	{
 		badge: {
-			text: 'Growth Plan',
+			text: '🔥 Ongoing Growth Support',
 			className:
 				'bg-white text-black text-shadow-md shadow-md border-l border-t border-purple-400/30',
 		},
 		icon: <></>,
 		tagline: {
-			text: 'Monthly Retainer',
+			text: 'Growth Retainer Package',
 			className: 'bg-teal-500/20 text-teal-300 border border-teal-500/30',
 		},
 		title: 'Continuous Growth Package',
-		price: '$3997',
+		price: '$2200/month',
 		subtitle: {
-			text: 'Iterative development for a polished, feature-rich product',
+			text: 'No long-term commitment',
 			className: 'text-teal-300',
 		},
 		cta: {
-			text: 'Book a Call →',
+			text: 'Book Now',
 			className:
 				'bg-white hover:bg-gray-100 text-black text-shadow-md shadow-md border border-black shadow-white/10',
 		},
 		featuresTitle: 'Monthly Services:',
 		features: [
 			{
-				text: '60 hours development time',
+				text: '60 hours of flexible development time per month',
 				icon: (
 					<IconBolt
 						size={20}
@@ -220,27 +212,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Flexible feature allocation',
-				icon: (
-					<IconCheck
-						size={20}
-						stroke={2}
-						className='text-teal-300'
-					/>
-				),
-			},
-			{
-				text: 'Weekly strategy calls',
-				icon: (
-					<IconHeartHandshake
-						size={20}
-						stroke={2}
-						className='text-teal-400'
-					/>
-				),
-			},
-			{
-				text: 'Priority feature development',
+				text: 'Priority on new features and updates',
 				icon: (
 					<IconRocket
 						size={20}
@@ -250,7 +222,17 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Continuous optimization',
+				text: 'Weekly strategy and progress calls',
+				icon: (
+					<IconHeartHandshake
+						size={20}
+						stroke={2}
+						className='text-teal-400'
+					/>
+				),
+			},
+			{
+				text: 'Continuous performance optimization',
 				icon: (
 					<IconStar
 						size={20}
@@ -260,7 +242,7 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 			{
-				text: 'Same-day emergency support',
+				text: 'Same-day emergency support for urgent needs',
 				icon: (
 					<IconShield
 						size={20}
@@ -269,7 +251,18 @@ const pricingCards: PricingCardProps[] = [
 					/>
 				),
 			},
+			{
+				text: 'Cancel anytime, zero hassle',
+				icon: (
+					<IconCheck
+						size={20}
+						stroke={2}
+						className='text-teal-300'
+					/>
+				),
+			},
 		],
+		limitedAvailability: 'Perfect for scaling startups needing continuous development and quick iterations.',
 	},
 ];
 
@@ -283,12 +276,13 @@ function PricingCard({
 	features,
 	tagline,
 	popular,
+	limitedAvailability,
 }: PricingCardProps) {
 	return (
 		<div
 			className={`bg-[#111111] border-2 shadow-inner shadow-black/20 border-[#222222] ${
 				popular ? 'border-indigo-500/30' : ''
-			} rounded-xl overflow-hidden relative flex flex-col h-full`}
+			} rounded-xl overflow-hidden relative  h-full grid grid-rows-[auto_auto_1fr_auto]`}
 		>
 			{/* Label Badge */}
 			<div
@@ -297,7 +291,7 @@ function PricingCard({
 				{badge.text}
 			</div>
 
-			{/* Card Header with Title */}
+			{/* Card Header with Title - Row 1 */}
 			<div className='p-4 sm:p-6 text-left py-8 sm:py-10 pb-4 sm:pb-5 space-y-2'>
 				<span
 					className={`${tagline.className} text-xs sm:text-sm py-1 px-2 rounded-md inline-block`}
@@ -314,19 +308,20 @@ function PricingCard({
 				<div className='mb-3 sm:mb-4'>
 					<div className='flex items-center mb-2'>
 						<span className='text-3xl sm:text-4xl font-bold text-white'>{price}</span>
-						{title === 'Continuous Growth Package' && (
-							<span className='text-white/70 ml-1 text-sm sm:text-base'>/month</span>
-						)}
 					</div>
 					<div className='text-xs sm:text-sm text-gray-300'>{subtitle.text}</div>
 				</div>
 			</div>
 
-			{/* Features List */}
-			<div className='px-4 sm:px-6 pb-4 sm:pb-6 flex-grow'>
+			{/* Features Title - Row 2 */}
+			<div className='px-4 sm:px-6'>
 				<h4 className='text-gray-300 font-medium mb-3 sm:mb-4 text-base sm:text-lg'>
 					{featuresTitle}
 				</h4>
+			</div>
+
+			{/* Features List - Row 3 (flexible height) */}
+			<div className='px-4 sm:px-6 pb-4 sm:pb-6 flex flex-col'>
 				<ul className='space-y-2 sm:space-y-3'>
 					{features.map((feature, index) => (
 						<FeatureItem
@@ -336,9 +331,17 @@ function PricingCard({
 						/>
 					))}
 				</ul>
+				
+				<div className='mt-auto pt-4'>
+					{limitedAvailability && (
+						<div className='text-sm text-amber-400 font-medium'>
+							⚡ {limitedAvailability}
+						</div>
+					)}
+				</div>
 			</div>
 
-			{/* CTA Button at bottom */}
+			{/* CTA Button - Row 4 */}
 			<div className='px-4 sm:px-6 pb-4 sm:pb-6 mt-auto'>
 				<a
 					href='/contact'
@@ -370,7 +373,7 @@ function FeatureItem({ text, icon }: { text: string; icon?: React.ReactNode }) {
 					</span>
 				</div>
 			</div>
-			<span className='text-gray-300'>{text}</span>
+			<span className='text-gray-300 text-sm'>{text}</span>
 		</li>
 	);
 }

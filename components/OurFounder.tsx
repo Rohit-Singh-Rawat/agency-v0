@@ -15,13 +15,12 @@ const OurFounder = () => {
 					<div className='mb-12'>
 						<h2 className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
 							Meet Harshdeep{' '}
-							<span className='bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-transparent bg-clip-text'>
+							<span className='bg-gradient-to-r from-[#00BFFF] to-[#FFA500] text-transparent bg-clip-text'>
 								Founder of LaunchPad Labs
 							</span>
 						</h2>
 						<p className='text-lg leading-7 text-gray-300'>
-							Your Strategic Tech Partner for Building MVPs That Scale — helping you transform ideas into market-ready products in record time.
-						</p>
+							Your Strategic Tech Partner for Building MVPs That Scale </p>
 					</div>
 					
 					<div className='flex flex-col lg:flex-row gap-8 items-center'>
@@ -61,16 +60,18 @@ const OurFounder = () => {
 						<div className='lg:w-3/5'>
 							<div className='glass-card p-6 shadow-lg '>
 								<p className='text-gray-300 mb-4'>
-									With over a <span className='text-blue-400 font-medium'>decade of experience</span> in software development and product strategy, Harshdeep has helped dozens of startups transform their ideas into successful digital products.
+									I&apos;m Harshdeep, the founder of LaunchPad Labs — a <span className='text-blue-400 font-medium'>future-focused development agency</span> built to turn ambitious ideas into real, results-driven digital products.
 								</p>
 								<p className='text-gray-300 mb-4'>
-									His expertise spans across web and mobile development, <span className='text-blue-400 font-medium'>cloud architecture</span>, and <span className='text-blue-400 font-medium'>AI integration</span> - ensuring your MVP is built with scalability and future growth in mind.
+									With years of hands-on experience delivering <span className='text-blue-400 font-medium'>scalable solutions</span> for <span className='text-orange-400 font-medium'>Fortune 500 companies</span> and <span className='text-orange-400 font-medium'>Shark Tank-funded startups</span>, I&apos;ve learned what it takes to move beyond &quot;just building something&quot; — and instead, create products that <span className='text-blue-400 font-medium'>convert, scale, and lead</span> in competitive markets.
+								</p>
+								<p className='text-gray-300 mb-4'>
+									At LaunchPad Labs, I now dedicate my expertise to helping startups, solo founders, and growing businesses bring their products to life — <span className='text-blue-400 font-medium'>fast</span>. From the very first brainstorming session to launching your MVP, I&apos;m personally involved in guiding your journey with clarity, strategy, and purpose.
 								</p>
 								<p className='text-gray-300 mb-6'>
-									Harshdeep founded LaunchPad Labs with a mission to make quality tech development accessible to early-stage founders and businesses who need to <span className='text-blue-400 font-medium'>move fast</span> without compromising on quality.
+									If you&apos;re looking for more than just a development agency — if you want a <span className='text-orange-400 font-medium'>long-term tech partner</span> who cares about your success — let&apos;s connect and build something remarkable together.
 								</p>
-								
-							</div>
+						</div>
 						</div>
 					</div>
 				</div>

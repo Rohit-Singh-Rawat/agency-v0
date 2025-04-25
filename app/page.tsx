@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero';
 import Pricing from '@/components/pricing';
-import AboutUs from '@/components/aboutUs';
 import Cta from '@/components/cta';
 import HowItWorks from '@/components/HowItWorks';
 import OurApproach from '@/components/our-approach';
@@ -18,7 +17,7 @@ const Home = () => {
 				{/* <Clients /> */}
 				<OurFounder />
 				<Pricing />
-				<AboutUs />
+				{/* <AboutUs />	 */}
 				<Cta />
 				<div className='fixed bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-10' />
 			</div>
