@@ -7,8 +7,8 @@ import { useState } from 'react';
 const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const navLinks = [
-		{ href: '/#services', label: 'Services' },
-		{ href: '/#clients', label: 'Clients' },
+		{ href: '/#how-it-works', label: 'How It Works' },
+		{ href: '/#meet-founder', label: 'Our Founder' },
 		{ href: '/#pricing', label: 'Pricing' },
 		{ href: '/#about', label: 'About' },
 		{ href: '/#our-process', label: 'Our Process' },

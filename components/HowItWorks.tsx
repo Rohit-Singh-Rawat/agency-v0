@@ -1,43 +1,52 @@
-import { cn } from "@/lib/utils";
-import { GridPattern } from "./grid";
+import { cn } from '@/lib/utils';
+import { GridPattern } from './grid';
+import { IconRocket, IconPlug, IconCpu } from '@tabler/icons-react';
 
-const steps = [
+const features = [
 	{
-		number: '01',
-		title: 'AI Discovery',
+		icon: (
+			<IconRocket
+				size={44}
+				stroke={1.5}
+			/>
+		),
+		title: '💼 MVP Package',
 		description:
-			'We understand your business goals and use AI to identify optimal features for your target users.',
+			'Everything you need — web app, landing page, and SEO-ready content — built to launch fast.',
 	},
 	{
-		number: '02',
-		title: 'Smart Blueprint',
+		icon: (
+			<IconPlug
+				size={44}
+				stroke={1.5}
+			/>
+		),
+		title: '🔌 Integrations',
 		description:
-			'Our AI creates a strategic plan focusing only on the core features needed for your MVP.',
+			"We connect payments, logins, emails & more — so you're launch-ready from day one.",
 	},
 	{
-		number: '03',
-		title: 'Accelerated Build',
-		description:
-			'Our AI-powered team designs and develops your MVP with unprecedented speed and quality.',
-	},
-	{
-		number: '04',
-		title: 'Intelligent Launch',
-		description:
-			'We help you release your product with AI-driven insights to gather user feedback effectively.',
+		icon: (
+			<IconCpu
+				size={44}
+				stroke={1.5}
+			/>
+		),
+		title: '🧠 Modern Stack',
+		description: 'Powered by the latest tech and AI to ensure speed, stability, and scalability.',
 	},
 ];
 
 const HowItWorks = () => {
 	return (
 		<section
-			id='our-process'
-			className='py-20 md:py-28 bg-background relative overflow-hidden container mx-auto max'
+			id='how-it-works'
+			className='py-20 md:py-28 bg-background relative overflow-hidden container mx-auto text-center'
 		>
 			<GridPattern
 				className={cn(
 					'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]',
-					'inset-x-0 inset-y-[-30%] h-[200%] stroke-blue-400/30'
+					'inset-x-0 inset-y-[-30%] h-[200%] stroke-white/20 '
 				)}
 				squares={[
 					[1, 5],
@@ -49,41 +58,35 @@ const HowItWorks = () => {
 					[9, 6],
 				]}
 				strokeDasharray='2'
-				patternOpacity={0.05}
+				patternOpacity={0.1}
 			/>
-			<div className='noise'>
-				<div className='container px-4 md:px-6 relative z-10'>
-					{' '}
-					<div className='mb-16'>
-						<h2 className='text-4xl font-bold mb-4 text-white'>
-							<span className=' text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5]'>
-								Our AI-Powered Process
-							</span>
-						</h2>
-						<p className='text-gray-300 max-w-2xl'>
-							{' '}
-							A streamlined approach that takes your idea from concept to market in weeks, not
-							months.
-						</p>
+
+			<div className='mb-16 text-left'>
+				<h2 className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
+					How It Works{' '}
+					<span className='bg-gradient-to-r from-[#1a1a1a] to-[#333333] text-transparent bg-clip-text'>
+						For Your Success
+					</span>
+				</h2>
+				<p className='text-lg leading-7 text-gray-300 '>
+					We supercharge your idea with lightning-fast MVP development. From concept to market-ready 
+					product in just five weeks — helping you outpace competitors in today&apos;s fast-moving tech landscape.
+				</p>
+			</div>
+
+			<div className='flex flex-col md:flex-row gap-8 mt-24 justify-center items-center'>
+				{features.map((feature, index) => (
+					<div
+						key={index}
+						className='text-center max-w-sm'
+					>
+						<div className='mb-5 p-3 rounded-lg bg-gray-100 dark:bg-gray-800/30 w-fit mx-auto'>
+							{feature.icon}
+						</div>
+						<h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
+						<p className='text-gray-600 dark:text-gray-300'>{feature.description}</p>
 					</div>
-					<div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
-						{steps.map((step, index) => (
-							<div
-								key={index}
-								className='relative animate-fade-in glass-card p-8  shadow-lg border-2 border-blue-300/20 bg-black'
-								style={{ animationDelay: `${index * 0.1}s` }}
-							>
-								<div className='absolute -top-4 -left-4 text-5xl  font-black text-blue-300/30 bg-black'>
-									{step.number}
-								</div>
-								<div className='relative z-10'>
-									<h3 className='text-xl font-semibold mb-3 text-blue-400'>{step.title}</h3>
-									<p className='text-foreground/60'>{step.description}</p>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
+				))}
 			</div>
 		</section>
 	);

@@ -1,68 +1,117 @@
-import Link from 'next/link';
-import Arrow8 from './arrow';
 import { cn } from '@/lib/utils';
-import { IconChevronDown } from '@tabler/icons-react';
+import * as React from 'react';
 
-const Hero = () => {
+interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+	title?: string;
+	subtitle?: {
+		regular: string;
+		gradient: string;
+	};
+	description?: string;
+	ctaText?: string;
+	ctaHref?: string;
+	gridOptions?: {
+		angle?: number;
+		cellSize?: number;
+		opacity?: number;
+		lightLineColor?: string;
+		darkLineColor?: string;
+	};
+}
+
+const RetroGrid = ({
+	angle = 65,
+	cellSize = 60,
+	opacity = 0.5,
+	lightLineColor = 'gray',
+	darkLineColor = 'gray',
+}) => {
+	const gridStyles = {
+		'--grid-angle': `${angle}deg`,
+		'--cell-size': `${cellSize}px`,
+		'--opacity': opacity,
+		'--light-line': lightLineColor,
+		'--dark-line': darkLineColor,
+	} as React.CSSProperties;
+
 	return (
-		<section className='relative py-28 md:py-44 overflow-hidden min-h-screen container mx-auto text-center'>
-			<div
-				className={cn(
-					'absolute inset-0 z-0',
-					'[background-size:20px_20px]',
-					'dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]'
-				)}
-			/>{' '}
-			<div
-				className='absolute inset-0 z-0 bg-radial-gradient from-blue-500/10 via-blue-400/5 to-transparent blur-sm'
-				style={{
-					backgroundImage:
-						'radial-gradient(circle at 70% 10%, rgba(234, 88, 12, 0.3), rgba(59, 130, 246, 0.3), rgba(249, 115, 22, 0.2), rgba(96, 165, 250, 0.2), transparent 70%)',
-				}}
-			></div>
-			<div className='pointer-events-none absolute inset-0 flex items-center justify-center   bg-radial-[at_50%_45%]  from-transparent via-black to-black  z-0'></div>
-			<div className='container mx-auto px-4 sm:px-4 relative z-10  bg-cover bg-center'>
-				<div className='max-w-3xl mx-auto text-center'>
-					<h1 className='text-3xl md:text-6xl font-bold mb-6 leading-tight text-white'>
-						Fast MVPs That Launch Your Vision
-					</h1>
-
-					<p className='text-base md:text-lg mb-10 text-gray-100 font-normal max-w-3xl mx-auto'>
-						We build rapid MVPs, delivering functional prototypes in weeks, not months. Launch
-						quickly, validate your ideas, and iterate based on real feedback.
-					</p>
-					<div className='flex justify-center'>
-						<div className='relative flex justify-center  w-fit'>
-							<Link
-								href='/'
-								className='inline-flex items-center border border-white/50 hover:bg-white hover:text-black hover:text-shadow-2xs text-base text-white px-10 py-3 rounded-lg font-semibold hover:opacity-90 active:scale-95 active:bg-white/10 transition-all duration-300 shadow-lg bg-black'
-							>
-								Book a Call
-							</Link>
-
-							{/* Curved arrow */}
-							<Arrow8 className='absolute right-[0%] bottom-[-150%]  md:right-[-43%] md:bottom-[-100%] origin-bottom-right  w-24 h-24 text-white/70 transform rotate-90 md:rotate-40' />
-							<span className='absolute right-[-50%] sm:right-[-100%] rotate-10 bottom-[-360%]  md:right-[-160%] md:rotate-10 md:bottom-[-150%] origin-bottom-right  w-40 h-24 text-white/70 transform font-caveat text-xl'>
-								Get your MVP in 2 weeks
-							</span>
-						</div>
-					</div>
-				</div>
+		<div
+			className={cn(
+				'pointer-events-none absolute size-full overflow-hidden [perspective:200px]',
+				`opacity-[var(--opacity)]`
+			)}
+			style={gridStyles}
+		>
+			<div className='absolute inset-0 bg-radial-[at_bottom] from-transparent via-transparent to-black z-[5]' />
+			<div className='absolute inset-0 [transform:rotateX(var(--grid-angle))]'>
+				<div className='animate-grid [background-image:linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] [background-repeat:repeat] [background-size:var(--cell-size)_var(--cell-size)] [height:300vh] [inset:0%_0px] [margin-left:-200%] [transform-origin:100%_0_0] [width:600vw] dark:[background-image:linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]' />
 			</div>
-			{/* Scroll down arrow */}
-			<Link
-				href={'/#services'}
-				className='absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/20  cursor-pointer z-10'
-			>
-				<span className='text-sm mb-2 font-medium text-white/10'>Scroll to explore</span>
-				<IconChevronDown
-					size={24}
-					stroke={2}
-					className='animate-bounce'
-				/>
-			</Link>
-		</section>
+			<div className='absolute inset-0 bg-gradient-to-t from-white to-transparent to-90% dark:from-black' />
+		</div>
 	);
 };
 
-export default Hero;
+const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
+	(
+		{
+			className,
+			title = 'Build products for everyone',
+			subtitle = {
+				regular: 'LaunchPad Labs — Build & Launch Your MVP  ',
+				gradient: 'in Weeks, Not Months',
+			},
+			description = 'We turn startup ideas into fully functional web and mobile apps — fast, affordable, and stress-free. At LaunchPad Labs, your product is live before others finish planning.',
+			ctaText = 'Book a call',
+			ctaHref = '#',
+			gridOptions,
+			...props
+		},
+		ref
+	) => {
+		return (
+			<div
+				className={cn('relative w-full overflow-hidden pt-8 md:pt-16', className)}
+				ref={ref}
+				{...props}
+			>
+				<div className='absolute inset-0 bg-radial from-transparent to-black z-[5]' />
+				<div className='absolute top-0 left-0 z-[0] inset-0 bg-purple-950/10 dark:bg-purple-950/10 bg-[radial-gradient(ellipse_40%_90%_at_50%_20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
+				<section className='relative max-w-full mx-auto z-[20]'>
+					<RetroGrid {...gridOptions} />
+					<div className='mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 z-50'>
+						<div className='space-y-6 sm:space-y-8 md:space-y-10 max-w-4xl leading-0 lg:leading-5 mx-auto text-center'>
+							<h1 className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit'>
+								{title}
+							</h1>
+							<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]'>
+								<span className='block sm:inline'>{subtitle.regular}</span>
+								<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200'>
+									{subtitle.gradient}
+								</span>
+							</h2>
+							<p className='max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base text-gray-600 dark:text-gray-300 px-2'>
+								{description}
+							</p>
+							<div className='flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-3'>
+								<span className='relative inline-block overflow-hidden rounded-full p-[1.5px] w-full sm:w-auto max-w-xs'>
+									<span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]' />
+									<div className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl'>
+										<a
+											href={ctaHref}
+											className='inline-flex text-sm sm:text-base rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all sm:w-auto py-2.5 sm:py-3 px-6 sm:px-8'
+										>
+											{ctaText}
+										</a>
+									</div>
+								</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		);
+	}
+);
+HeroSection.displayName = 'HeroSection';
+
+export default HeroSection;

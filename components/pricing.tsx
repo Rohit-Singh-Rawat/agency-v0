@@ -36,7 +36,7 @@ export default function Pricing() {
 
 			<div className='relative z-10'>
 				<div className='mb-10 sm:mb-16 text-center sm:text-left'>
-					<h2 className='text-3xl sm:text-4xl md:text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
+					<h2 className='text-3xl sm:text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
 						Accelerate Your{' '}
 						<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
 							Vision
