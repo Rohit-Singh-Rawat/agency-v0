@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import Pricing from '@/components/pricing';
 import AboutUs from '@/components/aboutUs';
 import Cta from '@/components/cta';
-import HowItWorks from '@/components/howItWorks';
+import HowItWorks from '@/components/HowItWorks';
 import OurApproach from '@/components/our-approach';
 import Process from '@/components/process';
 import OurFounder from '@/components/OurFounder';
@@ -16,7 +16,7 @@ const Home = () => {
 				<Process />
 				{/* <Services /> */}
 				{/* <Clients /> */}
-				<OurFounder/>
+				<OurFounder />
 				<Pricing />
 				<AboutUs />
 				<Cta />
