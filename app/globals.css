@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--background: #000000;
+	--foreground: #ededed;
 	--border: rgb(21, 21, 21);
 	--font-space-grotesk: 'Space Grotesk', sans-serif;
 	--font-outfit: 'Outfit', sans-serif;
@@ -58,11 +58,9 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #000000;
-		--foreground: #ededed;
-	}
+:root {
+	--background: #000000;
+	--foreground: #ededed;
 }
 
 html {

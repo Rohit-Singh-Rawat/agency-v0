@@ -44,9 +44,9 @@ const RetroGrid = ({
 		>
 			<div className='absolute inset-0 bg-radial-[at_bottom] from-transparent via-transparent to-black z-[5]' />
 			<div className='absolute inset-0 [transform:rotateX(var(--grid-angle))]'>
-				<div className='animate-grid [background-image:linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] [background-repeat:repeat] [background-size:var(--cell-size)_var(--cell-size)] [height:300vh] [inset:0%_0px] [margin-left:-200%] [transform-origin:100%_0_0] [width:600vw] dark:[background-image:linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]' />
+				<div className='animate-grid  [background-repeat:repeat] [background-size:var(--cell-size)_var(--cell-size)] [height:300vh] [inset:0%_0px] [margin-left:-200%] [transform-origin:100%_0_0] [width:600vw] [background-image:linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]' />
 			</div>
-			<div className='absolute inset-0 bg-gradient-to-t from-white to-transparent to-90% dark:from-black' />
+			<div className='absolute inset-0 bg-gradient-to-t  to-transparent to-90% from-black' />
 		</div>
 	);
 };
@@ -75,30 +75,30 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 				{...props}
 			>
 				<div className='absolute inset-0 bg-radial from-transparent to-black z-[5]' />
-				<div className='absolute top-0 left-0 z-[0] inset-0 bg-purple-950/10 dark:bg-purple-950/10 bg-[radial-gradient(ellipse_40%_90%_at_50%_20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
+				<div className='absolute top-0 left-0 z-[0] inset-0 bg-purple-950/10 bg-[radial-gradient(ellipse_40%_90%_at_50%_20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
 				<section className='relative max-w-full mx-auto z-[20]'>
 					<RetroGrid {...gridOptions} />
 					<div className='mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-28 z-50'>
 						<div className='space-y-6 sm:space-y-8 md:space-y-10 max-w-4xl leading-0 lg:leading-5 mx-auto text-center'>
-							<h1 className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 group font-geist mx-auto px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 border-[2px] border-black/5 dark:border-white/5 rounded-3xl w-fit'>
+							<h1 className='text-xs sm:text-sm text-gray-400 group font-geist mx-auto px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-tr  to-transparent from-zinc-300/5 via-gray-400/5 border-[2px]  border-white/5 rounded-3xl w-fit'>
 								{title}
 							</h1>
-							<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]'>
-								<span className='block sm:inline'>{subtitle.regular}</span>
-								<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200'>
+							<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]'>
+								<span className='block sm:inline '>{subtitle.regular}</span>
+								<span className='text-transparent bg-clip-text bg-gradient-to-r  from-purple-300 to-orange-200'>
 									{subtitle.gradient}
 								</span>
 							</h2>
-							<p className='max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base text-gray-600 dark:text-gray-300 px-2'>
+							<p className='max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base text-gray-300 px-2'>
 								{description}
 							</p>
 							<div className='flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-3'>
 								<span className='relative inline-block overflow-hidden rounded-full p-[1.5px] w-full sm:w-auto max-w-xs'>
 									<span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]' />
-									<div className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl'>
+									<div className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 text-xs font-medium backdrop-blur-3xl'>
 										<a
 											href={ctaHref}
-											className='inline-flex text-sm sm:text-base rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-input border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all sm:w-auto py-2.5 sm:py-3 px-6 sm:px-8'
+											className='inline-flex text-sm sm:text-base rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr  to-transparent from-zinc-300/5 via-purple-400/20 text-white border-input border-[1px] hover:bg-gradient-to-tr   hover:to-transparent hover:from-zinc-300/10 hover:via-purple-400/30 transition-all sm:w-auto py-2.5 sm:py-3 px-6 sm:px-8'
 										>
 											{ctaText}
 										</a>

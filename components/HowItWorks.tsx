@@ -79,11 +79,11 @@ const HowItWorks = () => {
 						key={index}
 						className='text-center max-w-sm'
 					>
-						<div className='mb-5 p-3 rounded-lg bg-gray-100 dark:bg-gray-800/30 w-fit mx-auto'>
+						<div className='mb-5 p-3 rounded-lg bg-gray-800/30 w-fit mx-auto'>
 							{feature.icon}
 						</div>
 						<h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
-						<p className='text-gray-600 dark:text-gray-300'>{feature.description}</p>
+						<p className='text-gray-300'>{feature.description}</p>
 					</div>
 				))}
 			</div>
