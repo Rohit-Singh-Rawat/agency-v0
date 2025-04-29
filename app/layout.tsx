@@ -22,8 +22,8 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-	title: 'Dark Agency',
-	description: 'Professional digital agency services',
+	title: 'Launchpad - Build & Launch Your MVP in Weeks, Not Months',
+	description: 'Build & Launch Your MVP in Weeks, Not Months',
 };
 
 export default function RootLayout({

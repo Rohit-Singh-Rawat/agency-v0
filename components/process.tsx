@@ -1,3 +1,5 @@
+'use client';
+
 import {
 	IconPhone,
 	IconClipboardList,
@@ -5,6 +7,8 @@ import {
 	IconPackage,
 	IconLifebuoy,
 } from '@tabler/icons-react';
+import { Section } from './shared/Section';
+import { SectionHeading } from './shared/SectionHeading';
 
 const steps = [
 	{
@@ -73,55 +77,42 @@ const ProcessCard = ({
 
 const Process = () => {
 	return (
-		<section
-			id='our-process'
-			className='py-20 md:py-28 bg-background relative overflow-hidden container mx-auto'
-		>
-			<div className='noise'>
-				<div className='container px-4 md:px-6 relative z-10'>
-					<div className='mb-16'>
-						<h2 className='text-4xl font-bold mb-4 text-white'>
-							<span className='text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5]'>
-								The{' '}
-								<span className='text-transparent bg-clip-text bg-gradient-to-r from-[#047e9f] to-[#6366F1]'>
-									LauchPad
-								</span>{' '}
-								Process
-							</span>
-						</h2>
-						<p className='text-gray-300 max-w-3xl'>
-							A transparent, efficient journey from first idea to full MVP — ready to launch in just
-							5 weeks.
-						</p>
+		<Section id='our-process'>
+			
+			<div className='relative z-10'>
+				<SectionHeading
+					title='The'
+					gradientText='LaunchPad Process'
+					subtitle='A transparent, efficient journey from first idea to full MVP — ready to launch in just 5 weeks.'
+				/>
+				
+				<div className='grid grid-cols-1 auto-rows-auto gap-4 w-full max-w-7xl mx-auto'>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-4 h-full'>
+						{/* First row - 3 cards */}
+						{steps.slice(0, 3).map((step, index) => (
+							<ProcessCard
+								key={index}
+								icon={step.icon}
+								title={step.title}
+								description={step.description}
+							/>
+						))}
 					</div>
-					<div className='grid grid-cols-1 auto-rows-auto gap-4 w-full'>
-						<div className='grid grid-cols-1 md:grid-cols-3 gap-4 h-full'>
-							{/* First row - 3 cards */}
-							{steps.slice(0, 3).map((step, index) => (
-								<ProcessCard
-									key={index}
-									icon={step.icon}
-									title={step.title}
-									description={step.description}
-								/>
-							))}
-						</div>
 
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-4 h-full'>
-							{/* Second row - 2 cards */}
-							{steps.slice(3, 5).map((step, index) => (
-								<ProcessCard
-									key={index + 3}
-									icon={step.icon}
-									title={step.title}
-									description={step.description}
-								/>
-							))}
-						</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-4 h-full'>
+						{/* Second row - 2 cards */}
+						{steps.slice(3, 5).map((step, index) => (
+							<ProcessCard
+								key={index + 3}
+								icon={step.icon}
+								title={step.title}
+								description={step.description}
+							/>
+						))}
 					</div>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };
 

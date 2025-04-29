@@ -8,21 +8,16 @@ const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const navLinks = [
 		{ href: '/#how-it-works', label: 'How It Works' },
+		{ href: '/#approach', label: 'Our Approach' },
+		{ href: '/#our-process', label: 'Our Process' },
 		{ href: '/#meet-founder', label: 'Our Founder' },
 		{ href: '/#pricing', label: 'Pricing' },
-		{ href: '/#about', label: 'About' },
-		{ href: '/#our-process', label: 'Our Process' },
 	];
 
 	return (
-		<header className='bg-background/10 backdrop-blur-sm border-b border-border p-4 z-50 fixed w-full top-0'>
-			<div className='container  flex justify-between items-center'>
-				<Link
-					href='/'
-					className='font-bold text-lg'
-				>
-					<Logo />
-				</Link>
+		<header className='bg-background/10 backdrop-blur-sm border-b border-border p-4 z-50 fixed w-full top-0 '>
+			<div className='container mx-auto max-w-7xl flex justify-between items-center'>
+				<Logo />
 				<nav className='hidden md:flex space-x-8 items-center'>
 					{navLinks.map(({ href, label }) => (
 						<Link
@@ -34,8 +29,8 @@ const NavBar = () => {
 						</Link>
 					))}
 					<Link
-						href='/contact'
-						className='bg-white px-5 py-2 rounded-full text-sm hover:scale-105 font-semibold hover:bg-foreground text-black transition-all duration-300 shadow-md  flex items-center justify-center'
+						href='/#contact'
+						className='bg-white px-5 py-2 rounded-full text-sm hover:scale-105 font-semibold hover:bg-foreground text-black transition-all duration-300 shadow-md flex items-center justify-center'
 					>
 						Contact Us
 					</Link>
@@ -51,7 +46,7 @@ const NavBar = () => {
 
 			{/* Mobile navigation */}
 			{isMenuOpen && (
-				<div className=' px-4 md:hidden py-4 space-y-4 flex flex-col items-center bg-background/95 backdrop-blur-xl mt-4 rounded-lg border border-white/10'>
+				<div className='container mx-auto px-4 md:hidden py-4 space-y-4 flex flex-col items-center bg-background/95 backdrop-blur-xl mt-4 rounded-lg border border-white/10'>
 					{navLinks.map(({ href, label }) => (
 						<Link
 							key={href}
@@ -64,9 +59,10 @@ const NavBar = () => {
 					))}
 					<Link
 						href='/#contact'
+						onClick={() => setIsMenuOpen(false)}
 						className='w-full rounded-full bg-[#3DD6B5] text-black hover:bg-[#3DD6B5]/90 text-center py-2'
 					>
-						Contact us
+						Contact Us
 					</Link>
 				</div>
 			)}

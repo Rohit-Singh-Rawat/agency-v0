@@ -14,6 +14,9 @@ import {
 import { cn } from '@/lib/utils';
 import { GridPattern } from './grid';
 import { ShimmerButton } from './magicui/shimmer-button';
+import { Section } from './shared/Section';
+import { SectionHeading } from './shared/SectionHeading';
+
 // Comparison item component for both traditional and LaunchPad approaches
 function ComparisonItem({
 	icon,
@@ -46,7 +49,7 @@ function ComparisonItem({
 // Traditional approach column component
 function TraditionalApproach() {
 	return (
-		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-red-900/20 rounded-2xl p-8 shadow-xl'>
+		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-red-700/20 rounded-2xl p-8 shadow-xl'>
 			<div className='flex justify-center w-full mb-4'>
 				{' '}
 				<div className='inline-block px-4 py-1 mb-6 rounded-full bg-red-500/10 text-red-300 border border-red-500/30 text-xl'>
@@ -183,47 +186,37 @@ function LaunchPadApproach() {
 
 export default function OurApproach() {
 	return (
-		<section
+		<Section
 			id='approach'
-			className='relative py-16 sm:py-24 md:py-32 overflow-hidden container mx-auto '
-		>
-			{/* Background with grid pattern */}
-			<div className='absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black'>
-				<GridPattern
-					className={cn(
-						'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]',
-						'inset-x-0 inset-y-[-30%] h-[200%] stroke-white/20'
-					)}
-					squares={[
-						[1, 5],
-						[3, 2],
-						[4, 7],
-						[6, 3],
-						[7, 8],
-						[8, 1],
-						[9, 6],
-					]}
-					strokeDasharray='2'
-					patternOpacity={0.1}
+		>	<div className='absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black'>
+			<GridPattern
+				className={cn(
+					'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]',
+					'inset-x-0 inset-y-[-30%] h-[200%] stroke-white/20'
+				)}
+				squares={[
+					[1, 5],
+					[3, 2],
+					[4, 7],
+					[6, 3],
+					[7, 8],
+					[8, 1],
+					[9, 6],
+				]}
+				strokeDasharray='2'
+				patternOpacity={0.1}
 				/>
-
-				{/* Subtle glow effects */}
-				<div className='absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-[120px]' />
-				<div className='absolute bottom-1/3 right-1/3 w-80 h-80 bg-purple-500/5 rounded-full blur-[150px]' />
 			</div>
 
-			<div className='relative z-10'>
-				<div className='mb-16 text-center sm:text-left'>
-					<h2 className='text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
-						Our{' '}
-						<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
-							Approach
-						</span>
-					</h2>
-					<p className='text-lg leading-7 text-gray-300 max-w-4xl'>
-						See how LaunchPad Labs delivers faster, smarter MVPs compared to traditional agencies.
-					</p>
-				</div>
+			{/* Subtle glow effects */}
+			<div className='absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-[120px]' />
+			<div className='absolute bottom-1/3 right-1/3 w-80 h-80 bg-purple-500/5 rounded-full blur-[150px]' />
+			<div className='relative z-10 text-left'>
+				<SectionHeading
+					title='Our'
+					gradientText='Approach'
+					subtitle='See how LaunchPad Labs delivers faster, smarter MVPs compared to traditional agencies.'
+				/>
 
 				<div className='flex flex-col md:flex-row gap-20 max-w-7xl mx-auto'>
 					{/* Traditional Development Column */}
@@ -239,6 +232,6 @@ export default function OurApproach() {
 					</ShimmerButton>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 }

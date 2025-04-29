@@ -9,43 +9,18 @@ import {
 	IconHeartHandshake,
 	IconChartBar,
 } from '@tabler/icons-react';
+import { Section } from './shared/Section';
+import { SectionHeading } from './shared/SectionHeading';
 
 export default function Pricing() {
 	return (
-		<section
-			id='pricing'
-			className='relative py-16 sm:py-24 md:py-32 overflow-hidden container mx-auto  sm:px-6'
-		>
-			{/* Grid Background Pattern */}
-			<div className='absolute inset-0 bg-black'>
-				<div
-					className='absolute inset-0 opacity-20'
-					style={{
-						backgroundImage:
-							'linear-gradient(to right, #222 1px, transparent 1px), linear-gradient(to bottom, #222 1px, transparent 1px)',
-						backgroundSize: '40px 40px',
-					}}
-				/>
-
-				{/* Gradient Orbs */}
-				<div className='absolute top-20 left-10 sm:left-20 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500/10 rounded-full blur-[100px]' />
-				<div className='absolute bottom-20 right-10 sm:right-20 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/10 rounded-full blur-[100px]' />
-				<div className='absolute top-40 right-10 sm:right-40 w-56 sm:w-80 h-56 sm:h-80 bg-emerald-500/10 rounded-full blur-[80px]' />
-				<div className='absolute bottom-40 left-10 sm:left-40 w-56 sm:w-72 h-56 sm:h-72 bg-amber-500/10 rounded-full blur-[90px]' />
-			</div>
-
+		<Section id='pricing' withGrid withGradientOrbs>
 			<div className='relative z-10'>
-				<div className='mb-10 sm:mb-16 text-center sm:text-left'>
-					<h2 className='text-3xl sm:text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
-						 Ready to Launch Your{' '}
-						<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
-							Idea?
-						</span>
-					</h2>
-					<p className='text-lg sm:text-xl leading-7 text-gray-300 max-w-2xl mx-auto sm:mx-0'>
-						Choose the perfect package and start building today.
-					</p>
-				</div>
+				<SectionHeading
+					title='Ready to Launch Your'
+					gradientText='Idea?'
+					subtitle='Choose the perfect package and start building today.'
+				/>
 
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-5xl mx-auto sm:px-10'>
 					{pricingCards.map((card, index) => (
@@ -56,7 +31,7 @@ export default function Pricing() {
 					))}
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 }
 
@@ -175,7 +150,8 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 		],
-		limitedAvailability: 'Limited Availability: We only take 5 clients per month — secure your spot today!',
+		limitedAvailability:
+			'Limited Availability: We only take 5 clients per month — secure your spot today!',
 	},
 	{
 		badge: {
@@ -262,7 +238,8 @@ const pricingCards: PricingCardProps[] = [
 				),
 			},
 		],
-		limitedAvailability: 'Perfect for scaling startups needing continuous development and quick iterations.',
+		limitedAvailability:
+			'Perfect for scaling startups needing continuous development and quick iterations.',
 	},
 ];
 
@@ -331,12 +308,10 @@ function PricingCard({
 						/>
 					))}
 				</ul>
-				
+
 				<div className='mt-auto pt-4'>
 					{limitedAvailability && (
-						<div className='text-sm text-amber-400 font-medium'>
-							⚡ {limitedAvailability}
-						</div>
+						<div className='text-sm text-amber-400 font-medium'>⚡ {limitedAvailability}</div>
 					)}
 				</div>
 			</div>

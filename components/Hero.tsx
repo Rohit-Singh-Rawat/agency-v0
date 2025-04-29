@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { cn } from '@/lib/utils';
 import { IconArrowDown } from '@tabler/icons-react';
 import * as React from 'react';
@@ -73,21 +73,23 @@ const ScrollDownArrow = () => {
 	const scrollToNextSection = () => {
 		window.scrollTo({
 			top: window.innerHeight,
-			behavior: 'smooth'
+			behavior: 'smooth',
 		});
 	};
 
 	return (
-		<div 
-			className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+		<div
+			className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 ${
+				isVisible ? 'opacity-100' : 'opacity-0'
+			}`}
 		>
-			<button 
+			<button
 				onClick={scrollToNextSection}
-				className="flex flex-col items-center text-white/50 hover:text-white/100 transition-colors cursor-pointer "
-				aria-label="Scroll down"
+				className='flex flex-col items-center text-white/50 hover:text-white/100 transition-colors cursor-pointer '
+				aria-label='Scroll down'
 			>
-				<span className="text-sm mb-2">Scroll down</span>
-				<IconArrowDown className='animate-bounce'/>
+				<span className='text-sm mb-2'>Scroll down</span>
+				<IconArrowDown className='animate-bounce' />
 				{/* <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
 					<div className="w-1 h-2 bg-white/70 rounded-full animate-bounce mt-1"></div>
 				</div> */}
@@ -115,7 +117,10 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 	) => {
 		return (
 			<div
-				className={cn('relative w-full h-screen overflow-hidden pt-8 ', className)}
+				className={cn(
+					'relative w-full h-[90vh] md:h-screen overflow-hidden pt-20 sm:pt-8 ',
+					className
+				)}
 				ref={ref}
 				{...props}
 			>
@@ -124,7 +129,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 					<div className='absolute top-0 left-0 z-[0] inset-0 bg-purple-950/10 bg-[radial-gradient(ellipse_40%_90%_at_50%_20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
 					<section className='relative max-w-full mx-auto z-[20]'>
 						<RetroGrid {...gridOptions} />
-						<div className='mx-auto px-4 py-12 sm:py-16 md:py-16  z-50'>
+						<div className='mx-auto  py-12 sm:py-16 md:py-16  z-50'>
 							<div className='space-y-6 sm:space-y-8 md:space-y-10 max-w-4xl leading-0 lg:leading-5 mx-auto text-center'>
 								<h1 className='text-xs sm:text-sm text-gray-400 group font-geist mx-auto px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-tr  to-transparent from-zinc-300/5 via-gray-400/5 border-[2px]  border-white/5 rounded-3xl w-fit'>
 									{title}
@@ -135,12 +140,12 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 										{subtitle.gradient}
 									</span>
 								</h2>
-								<p className='max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base text-gray-300 px-2'>
+								<p className=' sm:max-w-md md:max-w-2xl mx-auto text-base text-gray-300 px-2'>
 									{description}
 								</p>
 								<div className='flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-3'>
 									<span className='relative inline-block overflow-hidden rounded-full p-[1.5px] w-full sm:w-auto max-w-xs'>
-										<span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]'/>
+										<span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]' />
 										<div className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 text-xs font-medium backdrop-blur-3xl'>
 											<a
 												href={ctaHref}
