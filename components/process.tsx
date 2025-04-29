@@ -81,11 +81,15 @@ const Process = () => {
 				<div className='container px-4 md:px-6 relative z-10'>
 					<div className='mb-16'>
 						<h2 className='text-4xl font-bold mb-4 text-white'>
-							<span className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5]'>
-								The LaunchPad Process
+							<span className='text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5]'>
+								The{' '}
+								<span className='text-transparent bg-clip-text bg-gradient-to-r from-[#047e9f] to-[#6366F1]'>
+									LauchPad
+								</span>{' '}
+								Process
 							</span>
 						</h2>
-						<p className='text-gray-300 max-w-2xl'>
+						<p className='text-gray-300 max-w-3xl'>
 							A transparent, efficient journey from first idea to full MVP — ready to launch in just
 							5 weeks.
 						</p>

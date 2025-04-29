@@ -36,7 +36,7 @@ export default function Pricing() {
 
 			<div className='relative z-10'>
 				<div className='mb-10 sm:mb-16 text-center sm:text-left'>
-					<h2 className='text-3xl sm:text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
+					<h2 className='text-3xl sm:text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
 						 Ready to Launch Your{' '}
 						<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
 							Idea?
@@ -110,7 +110,7 @@ const pricingCards: PricingCardProps[] = [
 		cta: {
 			text: 'Book Now',
 			className:
-				'bg-black border border-white/10 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-black/50 text-white',
+				'bg-black border border-white/10 shadow-md hover:shadow-lg transition-all duration-300 hover:bg-black/50 text-white  cursor-pointer relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:opacity-0 hover:before:opacity-100 overflow-hidden',
 		},
 		featuresTitle: "What's Included:",
 		features: [
@@ -197,7 +197,7 @@ const pricingCards: PricingCardProps[] = [
 		cta: {
 			text: 'Book Now',
 			className:
-				'bg-white hover:bg-gray-100 text-black text-shadow-md shadow-md border border-black shadow-white/10',
+				'bg-white hover:bg-gray-100 text-black text-shadow-md shadow-md border border-black shadow-white/10 transition-all duration-300  hover:shadow-lg hover:brightness-110 active:scale-95',
 		},
 		featuresTitle: 'Monthly Services:',
 		features: [
@@ -280,7 +280,7 @@ function PricingCard({
 }: PricingCardProps) {
 	return (
 		<div
-			className={`bg-[#111111] border-2 shadow-inner shadow-black/20 border-[#222222] ${
+			className={`bg-[#111111] hover:scale-105 transition-all duration-500 border-2 shadow-inner shadow-black/20 border-[#222222] ${
 				popular ? 'border-indigo-500/30' : ''
 			} rounded-xl overflow-hidden relative  h-full grid grid-rows-[auto_auto_1fr_auto]`}
 		>

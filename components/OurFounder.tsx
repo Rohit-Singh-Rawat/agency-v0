@@ -11,37 +11,36 @@ const OurFounder = () => {
 			className='py-20 md:py-28 bg-background relative overflow-hidden container mx-auto'
 		>
 			<div className='noise'>
-				<div className='container px-4 md:px-6 relative z-10'>
+				<div className='container px-4 relative z-10'>
 					<div className='mb-12'>
 						<h2 className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
 							Meet Harshdeep{' '}
-							<span className='bg-gradient-to-r from-[#00BFFF] to-[#FFA500] text-transparent bg-clip-text'>
+							<span className='text-transparent bg-clip-text bg-gradient-to-r from-[#047e9f] to-[#6366F1]'>
 								Founder of LaunchPad Labs
 							</span>
 						</h2>
 						<p className='text-lg leading-7 text-gray-300'>
-							Your Strategic Tech Partner for Building MVPs That Scale </p>
+							Your Strategic Tech Partner for Building MVPs That Scale{' '}
+						</p>
 					</div>
-					
+
 					<div className='flex flex-col lg:flex-row gap-8 items-center'>
 						<div
-							className='lg:w-2/5 relative'
+							className='lg:w-1/5 relative'
 							onMouseEnter={() => setIsHovered(true)}
 							onMouseLeave={() => setIsHovered(false)}
 						>
 							<div
-								className={`relative rounded-xl overflow-hidden transition-all duration-500 ${
+								className={`relative w-full rounded-xl overflow-hidden transition-all duration-500 ${
 									isHovered ? 'transform scale-105 shadow-2xl shadow-blue-400/20' : ''
 								}`}
 							>
-								<div className='aspect-w-3 aspect-h-4 w-full max-w-[400px] mx-auto relative'>
-									<div className='absolute inset-0 rounded-xl border-2 border-blue-400/30 transform rotate-3 z-0'></div>
-									<div className='absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-transparent z-10 mix-blend-overlay'></div>
+								<div className='aspect-w-3 aspect-h-4 w-full max-w-[300px] mx-auto relative'>
 									<Image
 										src='/images/founder.jpg'
 										alt='Harshdeep - Founder of LaunchPad Labs'
-										width={400}
-										height={500}
+										width={200}
+										height={300}
 										className='object-cover rounded-xl z-20'
 									/>
 									<div
@@ -50,28 +49,32 @@ const OurFounder = () => {
 										}`}
 									></div>
 								</div>
-								<div className='absolute bottom-6 left-0 right-0 text-center px-4 z-40'>
-									<h3 className='text-white font-bold text-2xl'>Harshdeep</h3>
-									<p className='text-blue-300'>Founder, LaunchPad Labs</p>
-								</div>
 							</div>
+						
 						</div>
 
-						<div className='lg:w-3/5'>
+						<div className='w-4/5'>
 							<div className='glass-card p-6 shadow-lg '>
 								<p className='text-gray-300 mb-4'>
-									I&apos;m Harshdeep, the founder of LaunchPad Labs — a <span className='text-blue-400 font-medium'>future-focused development agency</span> built to turn ambitious ideas into real, results-driven digital products.
-								</p>
-								<p className='text-gray-300 mb-4'>
-									With years of hands-on experience delivering <span className='text-blue-400 font-medium'>scalable solutions</span> for <span className='text-orange-400 font-medium'>Fortune 500 companies</span> and <span className='text-orange-400 font-medium'>Shark Tank-funded startups</span>, I&apos;ve learned what it takes to move beyond &quot;just building something&quot; — and instead, create products that <span className='text-blue-400 font-medium'>convert, scale, and lead</span> in competitive markets.
-								</p>
-								<p className='text-gray-300 mb-4'>
-									At LaunchPad Labs, I now dedicate my expertise to helping startups, solo founders, and growing businesses bring their products to life — <span className='text-blue-400 font-medium'>fast</span>. From the very first brainstorming session to launching your MVP, I&apos;m personally involved in guiding your journey with clarity, strategy, and purpose.
+									I&apos;m Harshdeep, founder of LaunchPad Labs — a{' '}
+									<span className='text-purple-300 font-medium'>
+										future-focused development agency
+									</span>{' '}
+									dedicated to turning bold ideas into results-driven digital products. With
+									experience delivering{' '}
+									<span className='text-purple-300 font-medium'>scalable solutions</span> for{' '}
+									<span className='text-purple-300 font-medium'>Fortune 500 companies</span> and{' '}
+									<span className='text-purple-300 font-medium'>Shark Tank-backed startups</span>, I
+									know what it takes to build products that lead and last.
 								</p>
 								<p className='text-gray-300 mb-6'>
-									If you&apos;re looking for more than just a development agency — if you want a <span className='text-orange-400 font-medium'>long-term tech partner</span> who cares about your success — let&apos;s connect and build something remarkable together.
+									To maintain the highest quality, we work with{' '}
+									<span className='text-purple-300 font-medium'>limited clients a month</span> —
+									giving each project the focus it deserves. If you&apos;re ready to bring your
+									vision to life with clarity, speed, and impact, let&apos;s{' '}
+									<span className='text-purple-300 font-medium'>connect</span>.
 								</p>
-						</div>
+							</div>
 						</div>
 					</div>
 				</div>

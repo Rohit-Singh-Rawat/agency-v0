@@ -62,14 +62,18 @@ const HowItWorks = () => {
 			/>
 
 			<div className='mb-16 text-left'>
-				<h2 className='text-4xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
+				<h2 className='text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-4xl before:mr-[0.5] mb-4'>
 					How It Works{' '}
-					<span className='bg-gradient-to-r from-[#FF8800] to-[#FFC107] text-transparent bg-clip-text'>
+					<span className='text-transparent bg-clip-text bg-gradient-to-r from-[#047e9f] to-[#6366F1]'>
 						For Your Success
 					</span>
 				</h2>
 				<p className='text-lg leading-7 text-gray-300 '>
-					At LaunchPad Labs, we <span className="text-blue-400">light up your ideas</span> with <span className="text-blue-400">lightning-fast MVP development</span>. We take your concept and transform it into a <span className="text-blue-400">market-ready</span> web or mobile product in <span className="text-blue-400">just five weeks</span> — so you can shine brighter than competitors in today&apos;s fast-moving tech world.
+					At LaunchPad Labs, we <span className='text-purple-300'>light up your ideas</span> with{' '}
+					<span className='text-purple-300'>lightning-fast MVP development</span>. We take your
+					concept and transform it into a <span className='text-purple-300'>market-ready</span> web
+					or mobile product in <span className='text-purple-300'>just five weeks</span> — so you can
+					shine brighter than competitors in today&apos;s fast-moving tech world.
 				</p>
 			</div>
 
@@ -79,9 +83,7 @@ const HowItWorks = () => {
 						key={index}
 						className='text-center max-w-sm'
 					>
-						<div className='mb-5 p-3 rounded-lg bg-gray-800/30 w-fit mx-auto'>
-							{feature.icon}
-						</div>
+						<div className='mb-5 p-3 rounded-lg bg-gray-800/30 w-fit mx-auto'>{feature.icon}</div>
 						<h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
 						<p className='text-gray-300'>{feature.description}</p>
 					</div>
