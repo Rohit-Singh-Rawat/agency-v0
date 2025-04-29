@@ -45,7 +45,7 @@ const OurFounder = () => {
 					</div>
 
 					<div className='w-4/5'>
-						<div className='glass-card p-6 shadow-lg border-2 border-blue-300/20 bg-black group transition-all duration-300 hover:border-blue-400/40 hover:shadow-blue-500/5'>
+						<div className='glass-card p-6 shadow-lg  bg-black group '>
 							<p className='text-gray-300 mb-4'>
 								I&apos;m Harshdeep, founder of LaunchPad Labs — a{' '}
 								<span className='text-purple-300 font-medium'>
