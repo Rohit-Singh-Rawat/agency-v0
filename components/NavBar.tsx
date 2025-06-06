@@ -9,8 +9,6 @@ import {
 	useScroll,
 	useTransform,
 } from 'framer-motion';
-import { div } from 'motion/react-client';
-
 const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const { scrollY } = useScroll();
