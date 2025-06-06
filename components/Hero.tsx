@@ -94,7 +94,7 @@ const HeroSection = () => {
 									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
 								}
 								transition={{ duration: 0.5, delay: 0.4 }}
-								className='text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl tracking-tighter font-geist text-white mx-auto'
+								className='text-2xl sm:text-5xl lg:text-7xl tracking-tighter font-geist text-white mx-auto'
 							>
 								<span className='inline'>Build and launch </span>
 								<AuroraText
