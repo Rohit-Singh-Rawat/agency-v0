@@ -5,12 +5,16 @@ import HowItWorks from '@/components/HowItWorks';
 import OurApproach from '@/components/our-approach';
 import Process from '@/components/process';
 import OurFounder from '@/components/OurFounder';
+import { Spotlight } from '@/components/magicui/spotlight';
+import OurWork from '@/components/OurWork';
 const Home = () => {
 	return (
-		<main className='bg-background w-full'>
+		<main className='bg-background overflow-x-hidden w-full relative'>
+			<Spotlight />
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-full lg:max-w-5xl'>
 				<Hero />
 				<HowItWorks />
+				<OurWork/>
 				<OurApproach />
 				<Process />
 				{/* <Services /> */}

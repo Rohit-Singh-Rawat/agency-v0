@@ -20,7 +20,7 @@ export function SectionHeading({
 			className={cn('mb-10 sm:mb-16 text-left', className)}
 			{...props}
 		>
-			<h2 className='text-3xl sm:text-5xl font-semibold transition-all duration-300 text-white/90 before:content-["."] before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
+			<h2 className='text-3xl sm:text-5xl font-semibold transition-all duration-300 text-white/90  before:text-foreground before:text-3xl sm:before:text-4xl md:before:text-5xl before:mr-[0.5] mb-3 sm:mb-4'>
 				{title}
 				{gradientText && (
 					<span className='bg-gradient-to-r from-[#047e9f] to-[#6366F1] text-transparent bg-clip-text'>
