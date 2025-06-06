@@ -2,7 +2,12 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { IconBrandTwitter, IconBrandDiscord, IconBrandLinkedin, IconBrandMastodon } from '@tabler/icons-react';
+import {
+	IconBrandTwitter,
+	IconBrandDiscord,
+	IconBrandLinkedin,
+	IconBrandMastodon,
+} from '@tabler/icons-react';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -20,7 +25,7 @@ const Footer = () => {
 							className='font-normal flex gap-2 items-center text-sm text-black px-2 py-1 shrink-0 relative z-20'
 							href='/'
 						>
-							<Logo/>
+							<Logo />
 						</Link>
 						<p className='mt-4 text-neutral-400 max-w-xs'>
 							We build high-quality MVPs to transform your ideas into reality.
@@ -28,7 +33,8 @@ const Footer = () => {
 						<div className='flex gap-3 mt-6'>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='#'
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
 									<IconBrandTwitter
@@ -39,7 +45,8 @@ const Footer = () => {
 							</a>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='#'
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
 									<IconBrandDiscord
@@ -50,7 +57,8 @@ const Footer = () => {
 							</a>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='#'
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
 									<IconBrandLinkedin
@@ -61,7 +69,8 @@ const Footer = () => {
 							</a>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='#'
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
 									<IconBrandMastodon
@@ -79,7 +88,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										MVP Development
 									</a>
@@ -87,7 +97,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										UI/UX Design
 									</a>
@@ -95,7 +106,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Web Development
 									</a>
@@ -103,7 +115,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Mobile Apps
 									</a>
@@ -111,7 +124,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Consulting
 									</a>
@@ -124,7 +138,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Our Process
 									</a>
@@ -132,7 +147,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										How We Work
 									</a>
@@ -140,7 +156,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										About Us
 									</a>
@@ -148,7 +165,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Contact
 									</a>
@@ -161,7 +179,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Case Studies
 									</a>
@@ -169,7 +188,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Success Stories
 									</a>
@@ -177,7 +197,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										MVP Showcase
 									</a>
@@ -185,7 +206,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Testimonials
 									</a>
@@ -198,7 +220,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Privacy Policy
 									</a>
@@ -206,7 +229,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Terms of Service
 									</a>
@@ -214,7 +238,8 @@ const Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='#'
+										href='https://cal.com/launpad-labs/mvp-discussion'
+										target='_blank'
 									>
 										Cookie Policy
 									</a>

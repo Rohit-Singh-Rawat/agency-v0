@@ -5,6 +5,7 @@ import { GridPattern } from './grid';
 import { IconPlugConnected, IconDeviceDesktop, IconPackage } from '@tabler/icons-react';
 import { Section } from './shared/Section';
 import { SectionHeading } from './shared/SectionHeading';
+import { motion } from 'framer-motion';
 
 const features = [
 	{
@@ -41,6 +42,27 @@ const features = [
 	},
 ];
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2
+		}
+	}
+};
+
+const cardVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { 
+		opacity: 1, 
+		y: 0,
+		transition: {
+			duration: 0.5
+		}
+	}
+};
+
 const HowItWorks = () => {
 	return (
 		<Section id='how-it-works'>
@@ -63,25 +85,35 @@ const HowItWorks = () => {
 					patternOpacity={0.1}
 				/>
 
-				<SectionHeading
-					title='How It Works'
-					gradientText='For Your Success'
-					subtitle="At LaunchPad Labs, we light up your ideas with lightning-fast MVP development. We take your concept and transform it into a market-ready web or mobile product in just five weeks — so you can shine brighter than competitors in today's fast-moving tech world."
-			
-				/>
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={containerVariants}
+				>
+					<SectionHeading
+						title='How It Works'
+						gradientText='For Your Success'
+						subtitle="At LaunchPad Labs, we light up your ideas with lightning-fast MVP development. We take your concept and transform it into a market-ready web or mobile product in just five weeks — so you can shine brighter than competitors in today's fast-moving tech world."
+					/>
 
-				<div className='flex flex-col md:flex-row gap-8 mt-24 justify-center items-center'>
-					{features.map((feature, index) => (
-						<div
-							key={index}
-							className='text-center max-w-sm'
-						>
-							<div className='mb-5 p-3 rounded-lg bg-gray-800/30 w-fit mx-auto'>{feature.icon}</div>
-							<h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
-							<p className='text-gray-300'>{feature.description}</p>
-						</div>
-					))}
-				</div>
+					<motion.div 
+						className='flex flex-col md:flex-row gap-8 mt-24 justify-center items-center'
+						variants={containerVariants}
+					>
+						{features.map((feature, index) => (
+							<motion.div
+								key={index}
+								variants={cardVariants}
+								className='text-center max-w-sm'
+							>
+								<div className='mb-5 p-3 rounded-lg bg-gray-800/30 w-fit mx-auto'>{feature.icon}</div>
+								<h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>
+								<p className='text-gray-300'>{feature.description}</p>
+							</motion.div>
+						))}
+					</motion.div>
+				</motion.div>
 			</div>
 		</Section>
 	);

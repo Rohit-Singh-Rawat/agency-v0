@@ -14,7 +14,11 @@ import { SectionHeading } from './shared/SectionHeading';
 
 export default function Pricing() {
 	return (
-		<Section id='pricing' withGrid withGradientOrbs>
+		<Section
+			id='pricing'
+			withGrid
+			withGradientOrbs
+		>
 			<div className='relative z-10'>
 				<SectionHeading
 					title='Ready to Launch Your'
@@ -277,16 +281,22 @@ function PricingCard({
 				</span>
 				<div className='flex items-center gap-4 mb-3 sm:mb-4'>
 					<div>
-						<h3 className='text-xl sm:text-2xl font-semibold text-white'>{title}</h3>
+						<h3 className='text-xl sm:text-2xl font-semibold text-white'>
+							{title}
+						</h3>
 					</div>
 				</div>
 
 				{/* Price and Tagline */}
 				<div className='mb-3 sm:mb-4'>
 					<div className='flex items-center mb-2'>
-						<span className='text-3xl sm:text-4xl font-bold text-white'>{price}</span>
+						<span className='text-3xl sm:text-4xl font-bold text-white'>
+							{price}
+						</span>
 					</div>
-					<div className='text-xs sm:text-sm text-gray-300'>{subtitle.text}</div>
+					<div className='text-xs sm:text-sm text-gray-300'>
+						{subtitle.text}
+					</div>
 				</div>
 			</div>
 
@@ -311,7 +321,9 @@ function PricingCard({
 
 				<div className='mt-auto pt-4'>
 					{limitedAvailability && (
-						<div className='text-sm text-amber-400 font-medium'>⚡ {limitedAvailability}</div>
+						<div className='text-sm text-amber-400 font-medium'>
+							⚡ {limitedAvailability}
+						</div>
 					)}
 				</div>
 			</div>
@@ -319,7 +331,8 @@ function PricingCard({
 			{/* CTA Button - Row 4 */}
 			<div className='px-4 sm:px-6 pb-4 sm:pb-6 mt-auto'>
 				<a
-					href='/contact'
+					href='https://cal.com/launpad-labs/mvp-discussion'
+					target='_blank'
 					className={`block w-full ${cta.className} py-2 sm:py-3 rounded-lg font-medium text-center transition-colors text-sm sm:text-base`}
 				>
 					{cta.text}

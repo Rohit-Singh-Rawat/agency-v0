@@ -186,28 +186,27 @@ function LaunchPadApproach() {
 
 export default function OurApproach() {
 	return (
-		<Section
-			id='approach'
-		>	<div className='absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black'>
-			<GridPattern
-				className={cn(
-					'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]',
-					'inset-x-0 inset-y-[-30%] h-[200%] stroke-white/20'
-				)}
-				squares={[
-					[1, 5],
-					[3, 2],
-					[4, 7],
-					[6, 3],
-					[7, 8],
-					[8, 1],
-					[9, 6],
-				]}
-				strokeDasharray='2'
-				patternOpacity={0.1}
+		<Section id='approach'>
+			{' '}
+			<div className='absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black'>
+				<GridPattern
+					className={cn(
+						'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]',
+						'inset-x-0 inset-y-[-30%] h-[200%] stroke-white/20'
+					)}
+					squares={[
+						[1, 5],
+						[3, 2],
+						[4, 7],
+						[6, 3],
+						[7, 8],
+						[8, 1],
+						[9, 6],
+					]}
+					strokeDasharray='2'
+					patternOpacity={0.1}
 				/>
 			</div>
-
 			{/* Subtle glow effects */}
 			<div className='absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-[120px]' />
 			<div className='absolute bottom-1/3 right-1/3 w-80 h-80 bg-purple-500/5 rounded-full blur-[150px]' />
@@ -227,9 +226,14 @@ export default function OurApproach() {
 				</div>
 
 				<div className='mt-12 text-center flex justify-center'>
-					<ShimmerButton className='text-white  shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] cursor-pointer relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent  overflow-hidden px-8  hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)]  border border-white/10  py-2 rounded-full hover:scale-105 transition-all duration-300 bg-black  z-[10]'>
-						<a href='/contact'>Book a Call → </a>
-					</ShimmerButton>
+					<a
+						href='https://cal.com/launpad-labs/mvp-discussion'
+						target='_blank'
+					>
+						<ShimmerButton className='text-white  shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] cursor-pointer relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent  overflow-hidden px-8  hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)]  border border-white/10  py-2 rounded-full hover:scale-105 transition-all duration-300 bg-black  z-[10]'>
+							Book a Call →{' '}
+						</ShimmerButton>{' '}
+					</a>
 				</div>
 			</div>
 		</Section>

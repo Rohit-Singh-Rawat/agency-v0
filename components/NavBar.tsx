@@ -61,7 +61,8 @@ const NavBar = () => {
 							</Link>
 						))}
 						<Link
-							href='/#contact'
+							href='https://cal.com/launpad-labs/mvp-discussion'
+							target='_blank'
 							className='bg-white px-4 py-1.5 rounded-full text-sm hover:scale-105 font-semibold hover:bg-foreground text-black transition-all duration-300 shadow-md flex items-center justify-center'
 						>
 							Contact Us
@@ -87,7 +88,8 @@ const NavBar = () => {
 							{navLinks.map(({ href, label }) => (
 								<Link
 									key={href}
-									href={href}
+									href='https://cal.com/launpad-labs/mvp-discussion'
+									target='_blank'
 									onClick={() => setIsMenuOpen(false)}
 									className='text-foreground/70 hover:text-accent transition-colors w-full text-center py-2'
 								>
@@ -95,7 +97,8 @@ const NavBar = () => {
 								</Link>
 							))}
 							<Link
-								href='/#contact'
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
 								onClick={() => setIsMenuOpen(false)}
 								className='w-full rounded-full bg-[#3DD6B5] text-black hover:bg-[#3DD6B5]/90 text-center py-2'
 							>

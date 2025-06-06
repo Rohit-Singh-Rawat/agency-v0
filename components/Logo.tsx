@@ -3,10 +3,7 @@ import React from 'react';
 
 const Logo = () => {
 	return (
-		<Link
-			href='/'
-			className='flex items-center'
-		>
+		<Link href='/' className='flex items-center'>
 			<div className='h-5 px-5 w-auto'>
 				<svg
 					width='455'

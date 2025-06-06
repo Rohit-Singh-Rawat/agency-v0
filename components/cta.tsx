@@ -39,9 +39,14 @@ export default function CTA() {
 							</p>
 						</div>
 						<div className='w-full md:w-1/3 flex justify-center md:justify-end mt-6 md:mt-0'>
-							<RainbowButton className='w-full sm:w-auto text-black text-shadow-xs text-shadow-black/30 rounded-md px-6 py-3 text-sm sm:text-base'>
-								Book a Call Now
-							</RainbowButton>
+							<a
+								href='https://cal.com/launpad-labs/mvp-discussion'
+								target='_blank'
+							>
+								<RainbowButton className='w-full sm:w-auto text-black text-shadow-xs text-shadow-black/30 rounded-md px-6 py-3 text-sm sm:text-base'>
+									Book a Call Now
+									</RainbowButton>
+							</a>
 						</div>
 					</div>
 				</div>
