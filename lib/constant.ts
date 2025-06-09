@@ -1,6 +1,6 @@
 import heliaChat from '@/public/images/projects/heliaChat.png';
 import instadapp from '@/public/images/projects/Instadapp.png';
-import konnectUp from '@/public/images/projects/konnectUp.png';
+import konnectUp from '@/public/images/projects/konnectUpp.png';
 import stratoCore from '@/public/images/projects/stratoCore.png';
 import taskFlow from '@/public/images/projects/taskFlow.png';
 import { StaticImageData } from 'next/image';
