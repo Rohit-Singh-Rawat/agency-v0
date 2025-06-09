@@ -16,7 +16,6 @@ export default function Pricing() {
 	return (
 		<Section
 			id='pricing'
-			withGrid
 			withGradientOrbs
 		>
 			<div className='relative z-10'>
@@ -161,23 +160,23 @@ const pricingCards: PricingCardProps[] = [
 		badge: {
 			text: '🔥 Ongoing Growth Support',
 			className:
-				'bg-white text-black text-shadow-md shadow-md border-l border-t border-purple-400/30',
+				'bg-black text-white text-shadow-md shadow-md border border-gray-400/30',
 		},
 		icon: <></>,
 		tagline: {
 			text: 'Growth Retainer Package',
-			className: 'bg-teal-500/20 text-teal-300 border border-teal-500/30',
+			className: 'bg-gray-500/20 text-gray-700 border border-gray-500/30',
 		},
 		title: 'Continuous Growth Package',
 		price: '$2200/month',
 		subtitle: {
 			text: 'No long-term commitment',
-			className: 'text-teal-300',
+			className: 'text-gray-700',
 		},
 		cta: {
 			text: 'Book Now',
 			className:
-				'bg-white hover:bg-gray-100 text-black text-shadow-md shadow-md border border-black shadow-white/10 transition-all duration-300  hover:shadow-lg hover:brightness-110 active:scale-95',
+				'bg-black hover:bg-neutral-800 text-white text-shadow-md shadow-md border border-neutral-800 transition-all duration-300 hover:shadow-lg hover:brightness-110 active:scale-95',
 		},
 		featuresTitle: 'Monthly Services:',
 		features: [
@@ -187,7 +186,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconBolt
 						size={20}
 						stroke={2}
-						className='text-teal-400'
+						className='text-gray-600'
 					/>
 				),
 			},
@@ -197,7 +196,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconRocket
 						size={20}
 						stroke={2}
-						className='text-teal-300'
+						className='text-gray-700'
 					/>
 				),
 			},
@@ -207,7 +206,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconHeartHandshake
 						size={20}
 						stroke={2}
-						className='text-teal-400'
+						className='text-gray-600'
 					/>
 				),
 			},
@@ -217,7 +216,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconStar
 						size={20}
 						stroke={2}
-						className='text-teal-400'
+						className='text-gray-600'
 					/>
 				),
 			},
@@ -227,7 +226,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconShield
 						size={20}
 						stroke={2}
-						className='text-teal-300'
+						className='text-gray-700'
 					/>
 				),
 			},
@@ -237,7 +236,7 @@ const pricingCards: PricingCardProps[] = [
 					<IconCheck
 						size={20}
 						stroke={2}
-						className='text-teal-300'
+						className='text-gray-700'
 					/>
 				),
 			},
@@ -261,9 +260,7 @@ function PricingCard({
 }: PricingCardProps) {
 	return (
 		<div
-			className={`bg-[#111111] hover:scale-105 transition-all duration-500 border-2 shadow-inner shadow-black/20 border-[#222222] ${
-				popular ? 'border-indigo-500/30' : ''
-			} rounded-xl overflow-hidden relative  h-full grid grid-rows-[auto_auto_1fr_auto]`}
+			className={`${popular ? 'bg-[#111111]' : 'bg-white'} hover:scale-105 transition-all duration-500 border-2 shadow-inner ${popular ? 'shadow-black/20 border-[#222222] ' : 'shadow-gray-100/20 border-neutral-300'} rounded-xl overflow-hidden relative h-full grid grid-rows-[auto_auto_1fr_auto]`}
 		>
 			{/* Label Badge */}
 			<div
@@ -281,7 +278,7 @@ function PricingCard({
 				</span>
 				<div className='flex items-center gap-4 mb-3 sm:mb-4'>
 					<div>
-						<h3 className='text-xl sm:text-2xl font-semibold text-white'>
+						<h3 className={`text-xl sm:text-2xl font-semibold ${popular ? 'text-white' : 'text-black'}`}>
 							{title}
 						</h3>
 					</div>
@@ -290,11 +287,11 @@ function PricingCard({
 				{/* Price and Tagline */}
 				<div className='mb-3 sm:mb-4'>
 					<div className='flex items-center mb-2'>
-						<span className='text-3xl sm:text-4xl font-bold text-white'>
+						<span className={`text-3xl sm:text-4xl font-bold ${popular ? 'text-white' : 'text-black'}`}>
 							{price}
 						</span>
 					</div>
-					<div className='text-xs sm:text-sm text-gray-300'>
+					<div className={`text-xs sm:text-sm ${popular ? 'text-gray-300' : 'text-gray-600'}`}>
 						{subtitle.text}
 					</div>
 				</div>
@@ -302,7 +299,7 @@ function PricingCard({
 
 			{/* Features Title - Row 2 */}
 			<div className='px-4 sm:px-6'>
-				<h4 className='text-gray-300 font-medium mb-3 sm:mb-4 text-base sm:text-lg'>
+				<h4 className={`${popular ? 'text-gray-300' : 'text-gray-800'} font-medium mb-3 sm:mb-4 text-base sm:text-lg`}>
 					{featuresTitle}
 				</h4>
 			</div>
@@ -315,13 +312,14 @@ function PricingCard({
 							key={index}
 							text={feature.text}
 							icon={feature.icon}
+							isWhiteCard={!popular}
 						/>
 					))}
 				</ul>
 
 				<div className='mt-auto pt-4'>
 					{limitedAvailability && (
-						<div className='text-sm text-amber-400 font-medium'>
+						<div className={`text-sm ${popular ? 'text-amber-400' : 'text-amber-600'} font-medium`}>
 							⚡ {limitedAvailability}
 						</div>
 					)}
@@ -342,26 +340,26 @@ function PricingCard({
 	);
 }
 
-function FeatureItem({ text, icon }: { text: string; icon?: React.ReactNode }) {
+function FeatureItem({ text, icon, isWhiteCard }: { text: string; icon?: React.ReactNode; isWhiteCard?: boolean }) {
 	return (
 		<li className='flex items-center gap-2 sm:gap-3 text-sm sm:text-base'>
 			<div className='flex-shrink-0'>
 				<div
-					className={`rounded-lg border flex items-center justify-center border-white/30 p-1 relative overflow-hidden`}
+					className={`rounded-lg border flex items-center justify-center ${isWhiteCard ? 'border-gray-300' : 'border-white/30'} p-1 relative overflow-hidden`}
 				>
-					<div className='absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none'></div>
+					<div className={`absolute inset-0 ${isWhiteCard ? 'bg-gradient-to-br from-gray-100/50 to-transparent' : 'bg-gradient-to-br from-white/10 to-transparent'} pointer-events-none`}></div>
 					<span className='w-4 h-4 sm:w-5 sm:h-5 relative z-10 flex items-center justify-center'>
 						{icon || (
 							<IconCheck
 								size={18}
 								stroke={2}
-								className='text-blue-400'
+								className={isWhiteCard ? 'text-gray-600' : 'text-blue-400'}
 							/>
 						)}
 					</span>
 				</div>
 			</div>
-			<span className='text-gray-300 text-sm'>{text}</span>
+			<span className={`${isWhiteCard ? 'text-gray-700' : 'text-gray-300'} text-sm`}>{text}</span>
 		</li>
 	);
 }

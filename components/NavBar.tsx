@@ -21,7 +21,7 @@ const NavBar = () => {
 	const borderWidth = useTransform(scrollY, [50, 100], ['0', '1px']);
 
 	const navLinks = [
-		{ href: '/#how-it-works', label: 'How It Works' },
+		{ href: '/#our-work', label: 'Our Work' },
 		{ href: '/#approach', label: 'Our Approach' },
 		{ href: '/#our-process', label: 'Our Process' },
 		{ href: '/#meet-founder', label: 'Our Founder' },

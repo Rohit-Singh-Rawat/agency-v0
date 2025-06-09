@@ -94,7 +94,7 @@ const HeroSection = () => {
 									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
 								}
 								transition={{ duration: 0.5, delay: 0.4 }}
-								className='text-2xl sm:text-5xl lg:text-7xl tracking-tighter font-geist text-white mx-auto'
+								className='text-2xl sm:text-5xl lg:text-7xl 2xl:text-[80px] tracking-tighter font-geist text-white mx-auto'
 							>
 								<span className='inline'>Build and launch </span>
 								<AuroraText
@@ -133,11 +133,12 @@ const HeroSection = () => {
 								className='flex flex-col sm:flex-row items-center justify-center gap-y-2 xs:gap-y-3 sm:gap-x-3'
 							>
 								<a
-									href='https://cal.com/launpad-labs/mvp-discussion'
+									href='https://calendly.com/vishnoiabhishek29/30min'
 									target='_blank'
-									className='inline-flex rounded-full text-center items-center justify-center bg-purple-600/80 shadow-inner shadow-purple-500 text-white hover:bg-purple-700 transition-all w-full sm:w-auto py-2 xs:py-3 sm:py-3 px-4 xs:px-6 sm:px-10 text-xs xs:text-sm sm:text-base hover:shadow-[inset_0_0_15px_rgba(168,85,247,0.4)] duration-300'
+									rel='noopener noreferrer'
+									className='px-8 py-3 rounded-full border ring ring-border/50 border-blue-500/70 bg-[radial-gradient(35%_63%_at_50%_50%,_#60a5fa_0%,_#3b82f6_100%)] shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),_0_4px_10px_rgba(96,165,250,0.3)] transition-all duration-300 hover:shadow-[inset_0_1px_5px_rgba(255,255,255,0.4),_0_6px_15px_rgba(96,165,250,0.4)] hover:brightness-110 active:scale-[0.98] hidden md:inline-flex items-center'
 								>
-									Book a call
+									<span className='text-center font-bold text-[16px] tracking-[-0.02em] text-white font-[Manrope,sans-serif]'>Book a Call</span>
 								</a>
 							</AnimatedDiv>
 						</div>

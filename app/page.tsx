@@ -1,18 +1,21 @@
 import Hero from '@/components/Hero';
 import Pricing from '@/components/pricing';
 import Cta from '@/components/cta';
-import HowItWorks from '@/components/HowItWorks';
+// import HowItWorks from '@/components/HowItWorks';
 import OurApproach from '@/components/our-approach';
 import Process from '@/components/process';
 import OurFounder from '@/components/OurFounder';
 import { Spotlight } from '@/components/magicui/spotlight';
 import OurWork from '@/components/OurWork';
+import NumbersSection from '@/components/NumbersSection';
+
 const Home = () => {
 	return (
 		<main className='bg-background overflow-x-hidden w-full relative'>
 			<Spotlight /> <Hero />
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-full lg:max-w-5xl'>
-				<HowItWorks />
+				<NumbersSection />
+				{/* <HowItWorks /> */}
 				<OurWork />
 				<OurApproach />
 				<Process />

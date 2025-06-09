@@ -37,3 +37,5 @@ export function SectionHeading({
 		</div>
 	);
 }
+
+export default SectionHeading;

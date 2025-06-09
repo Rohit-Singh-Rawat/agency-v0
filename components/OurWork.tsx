@@ -1,78 +1,74 @@
 'use client';
 import React from 'react';
-import { motion, useAnimationFrame } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Section } from './shared/Section';
 import { SectionHeading } from './shared/SectionHeading';
 import Image from 'next/image';
+import { projects } from '@/lib/constant';
 
-const projects = [
-	{
-		name: 'Konnect Up',
-		description: 'Job Portal for the future',
-		image: '/images/projects/konnectup.png',
-	},
-];
+type MarqueeProps = {
+	children: React.ReactNode
+	gap?: string
+	direction?: 'left' | 'up'
+	pauseOnHover?: boolean
+	reverse?: boolean
+	fade?: boolean
+	className?: string
+}
 
-const SLIDE_SPEED = 20; // px per second
+export const Marquee = (props: MarqueeProps) => {
+	const {
+		children,
+		gap = '1rem',
+		direction = 'left',
+		pauseOnHover = false,
+		reverse = false,
+		fade = false,
+		className,
+	} = props
 
-function InfiniteSlider() {
-	const [width, setWidth] = React.useState(0);
-	const containerRef = React.useRef<HTMLDivElement>(null);
-	const [x, setX] = React.useState(0);
-
-	React.useEffect(() => {
-		if (containerRef.current) {
-			setWidth(containerRef.current.scrollWidth / 2);
-		}
-	}, []);
-
-	useAnimationFrame((t, delta) => {
-		setX((prev) => {
-			let next = prev - (SLIDE_SPEED * delta) / 1000;
-			if (Math.abs(next) >= width) {
-				next = 0;
-			}
-			return next;
-		});
-	});
+	const mask = fade
+		? `linear-gradient(${
+				direction === 'left' ? 'to right' : 'to bottom'
+			}, transparent 0%, rgba(0, 0, 0, 1.0) 5%, rgba(0, 0, 0, 1.0) 95%, transparent 100%)`
+		: undefined
 
 	return (
-		<div className='overflow-hidden w-full relative'>
-			<motion.div
-				ref={containerRef}
-				className='flex whitespace-nowrap'
-				style={{ x }}
-			>
-				{[...projects, ...projects].map((project, idx) => (
-					<div
-						key={idx}
-						className={cn(
-							'w-auto px-2 sm:px-4 py-4 sm:py-6 mx-1 sm:mx-2',
-						)}
-					>
-						<div className='flex flex-col sm:flex-row items-start sm:items-center w-full gap-2 sm:gap-3 p-1'>
-							<span className='text-base sm:text-lg md:text-xl'>
-								{project.name}
-							</span>
-							<div className='hidden sm:block w-[1px] h-6 bg-neutral-300' />
-							<span className='text-neutral-400 text-xs sm:text-sm'>
-								{project.description}
-							</span>
-						</div>
-						<div className='relative aspect-[16/9] w-[280px] sm:w-[400px] md:w-[500px] lg:w-[700px] mb-4 overflow-hidden rounded-lg'>
-							<Image
-								src={project.image}
-								alt={project.name}
-								fill
-								className='object-cover'
-							/>
-						</div>
-					</div>
-				))}
-			</motion.div>
+		<div
+			className={cn(
+				'group flex overflow-hidden relative',
+				direction === 'left' ? 'flex-row' : 'flex-col',
+				className
+			)}
+			style={{
+				maskImage: mask,
+				WebkitMaskImage: mask,
+				gap,
+			}}
+		>
+		
+			{[0, 1].map((n) => (
+				<div
+					key={n}
+					style={
+						{
+							'--gap': gap,
+						} as React.CSSProperties
+					}
+					className={cn(
+						'flex shrink-0 justify-around gap-[var(--gap)]',
+						direction === 'left'
+							? 'animate-marquee-left flex-row'
+							: 'animate-marquee-up flex-col',
+						pauseOnHover && 'group-hover:[animation-play-state:paused]',
+						reverse && 'direction-reverse'
+					)}
+				>
+					{children}
+				</div>
+			))}
 		</div>
-	);
+	)
 }
 
 const OurWork: React.FC = () => {
@@ -84,7 +80,33 @@ const OurWork: React.FC = () => {
 				subtitle="See how we've helped startups launch successful products with our rapid MVP development approach."
 			/>
 			<div className='mt-8 sm:mt-12 md:mt-16'>
-				<InfiniteSlider />
+				<Marquee  pauseOnHover className='w-full'>
+					{projects.map((project, idx) => (
+						<div
+							key={idx}
+							className='flex flex-col w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] px-2 sm:px-4 py-4 sm:py-6 mx-1 sm:mx-2'
+						>
+							<div className='relative aspect-[16/9] w-full mb-4 overflow-hidden rounded-lg border border-border/80'>
+								<Image
+									src={project.image}
+									alt={project.title}
+									fill
+									loading='lazy'
+									className='object-cover'
+								/>
+							</div>
+							<div className='flex flex-col gap-2 p-2'>
+								<h3 className='text-lg sm:text-xl md:text-2xl font-semibold text-white'>
+									{project.title}
+								</h3>
+								<p className='text-neutral-400 text-sm sm:text-base leading-relaxed'>
+									{project.description}
+								</p>
+								
+							</div>
+						</div>
+					))}
+				</Marquee>
 			</div>
 		</Section>
 	);
