@@ -49,7 +49,7 @@ function ComparisonItem({
 // Traditional approach column component
 function TraditionalApproach() {
 	return (
-		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-red-700/20 rounded-2xl p-8 shadow-xl'>
+		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-red-700/20 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition-all duration-300'>
 			<div className='flex justify-center w-full mb-4'>
 				{' '}
 				<div className='inline-block px-4 py-1 mb-6 rounded-full bg-red-500/10 text-red-300 border border-red-500/30 text-xl'>
@@ -121,7 +121,7 @@ function TraditionalApproach() {
 // LaunchPad approach column component
 function LaunchPadApproach() {
 	return (
-		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-indigo-500/30 rounded-2xl p-8 shadow-xl'>
+		<div className='flex-1 backdrop-blur-sm bg-black/30 border border-indigo-500/30 rounded-2xl p-8 shadow-xl hover:scale-[1.02] transition-all duration-300'>
 			<div className='flex justify-center w-full mb-4'>
 				<div className='inline-block px-4 py-1 mb-6 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 text-xl'>
 					LaunchPad Labs Approach
