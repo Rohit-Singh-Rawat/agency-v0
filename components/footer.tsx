@@ -8,7 +8,7 @@ import {
 } from '@tabler/icons-react';
 import Logo from './Logo';
 
-const Footer = () => {
+const 	Footer = () => {
 	return (
 		<div className='relative border-t border-white/[0.1] px-8 bg-black w-full overflow-hidden mx-auto max-w-7xl'>
 			<div className='absolute bottom-full left-1/2 -translate-x-1/2 -mb-px flex h-8 items-end overflow-hidden'>
@@ -31,7 +31,7 @@ const Footer = () => {
 						<div className='flex gap-3 mt-6'>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='https://cal.com/launpad-labs/mvp-discussion'
+								href='https://x.com/MVP_Builder'
 								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
@@ -43,7 +43,7 @@ const Footer = () => {
 							</a>
 							<a
 								className='w-10 h-10 bg-transparent rounded flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded'
-								href='https://cal.com/launpad-labs/mvp-discussion'
+								href='https://www.linkedin.com/in/harshdeep5inh/'
 								target='_blank'
 							>
 								<div className='w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center'>
