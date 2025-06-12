@@ -11,19 +11,18 @@ const OurFounder = () => {
 		<Section id='meet-founder'>
 			<div className='relative z-10'>
 				<SectionHeading
-					title='Meet Harshdeep'
-					gradientText='Founder of LaunchPad Labs'
-					subtitle='Your Strategic Tech Partner for Building MVPs That Scale'
+					title='Meet the '
+					gradientText='Founder'
 				/>
 
-				<div className='flex flex-col lg:flex-row gap-8 items-center'>
+				<div className='flex flex-col lg:flex-row gap-8 items-center justify-center'>
 					<div
-						className='lg:w-1/5 relative'
+						className=' relative h-auto'
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}
 					>
 						<div
-							className={`relative w-full rounded-xl overflow-hidden transition-all duration-500 ${
+							className={`relative  w-full rounded-xl overflow-hidden transition-all duration-500 ${
 								isHovered
 									? 'transform scale-105 shadow-2xl shadow-blue-400/20'
 									: ''
@@ -46,37 +45,40 @@ const OurFounder = () => {
 						</div>
 					</div>
 
-					<div className='w-full md:w-4/5'>
-						<div className='glass-card p-2 md:p-6 shadow-lg  bg-black group '>
+					<div className='w-full max-w-2xl'>
+						<div className='glass-card px-2 md:px-6 shadow-lg  bg-black group '>
 							<p className='text-gray-300 mb-4'>
 								I&apos;m Harshdeep, founder of LaunchPad Labs — a{' '}
-								<span className='text-purple-300 font-medium'>
-									future-focused development agency
+								<span className='text-blue-400 font-medium'>
+									future-forward development agency
+								</span>
+								. I&apos;ve built{' '}
+								<span className='text-blue-400 font-medium'>
+									40+ products
 								</span>{' '}
-								dedicated to turning bold ideas into results-driven digital
-								products. With experience delivering{' '}
-								<span className='text-purple-300 font-medium'>
-									scalable solutions
-								</span>{' '}
-								for{' '}
-								<span className='text-purple-300 font-medium'>
+								that scaled from MVPs to full-fledged platforms, collectively raising over{' '}
+								<span className='text-blue-400 font-medium'>
+									$12 million
+								</span>
+								. From{' '}
+								<span className='text-blue-400 font-medium'>
 									Fortune 500 companies
 								</span>{' '}
-								and{' '}
-								<span className='text-purple-300 font-medium'>
+								to{' '}
+								<span className='text-blue-400 font-medium'>
 									Shark Tank-backed startups
 								</span>
-								, I know what it takes to build products that lead and last.
+								, I&apos;ve delivered solutions that are built to scale, last, and lead.
 							</p>
 							<p className='text-gray-300 mb-6'>
-								To maintain the highest quality, we work with{' '}
-								<span className='text-purple-300 font-medium'>
-									limited clients a month
+								To ensure top-tier quality, we work with a{' '}
+								<span className='text-blue-400 font-medium'>
+									limited number of clients
 								</span>{' '}
-								— giving each project the focus it deserves. If you&apos;re
+								each month giving every project the attention it deserves. If you&apos;re
 								ready to bring your vision to life with clarity, speed, and
 								impact, let&apos;s{' '}
-								<span className='text-purple-300 font-medium'>connect</span>.
+								<span className='text-blue-400 font-medium'>connect</span>.
 							</p>
 						</div>
 					</div>

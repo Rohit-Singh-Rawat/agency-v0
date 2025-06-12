@@ -35,17 +35,18 @@ export default function CTA() {
 								into reality?
 							</h2>
 							<p className='text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto md:mx-0'>
-								Let&apos;s build your MVP together and bring your vision to life.
+								Let&apos;s build your MVP together and bring your vision to
+								life.
 							</p>
 						</div>
 						<div className='w-full md:w-1/3 flex justify-center md:justify-end mt-6 md:mt-0'>
 							<a
-								href='https://cal.com/launpad-labs/mvp-discussion'
+								href='https://cal.com/launchpad-labs'
 								target='_blank'
 							>
 								<RainbowButton className='w-full sm:w-auto text-black text-shadow-xs text-shadow-black/30 rounded-md px-6 py-3 text-sm sm:text-base'>
 									Book a Call Now
-									</RainbowButton>
+								</RainbowButton>
 							</a>
 						</div>
 					</div>

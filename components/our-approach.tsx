@@ -227,7 +227,7 @@ export default function OurApproach() {
 
 				<div className='mt-12 text-center flex justify-center'>
 					<a
-						href='https://cal.com/launpad-labs/mvp-discussion'
+						href='https://cal.com/launchpad-labs'
 						target='_blank'
 					>
 						<ShimmerButton className='text-white  shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] cursor-pointer relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent  overflow-hidden px-8  hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)]  border border-white/10  py-2 rounded-full hover:scale-105 transition-all duration-300 bg-black  z-[10]'>

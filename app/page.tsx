@@ -8,14 +8,17 @@ import OurFounder from '@/components/OurFounder';
 import { Spotlight } from '@/components/magicui/spotlight';
 import OurWork from '@/components/OurWork';
 import NumbersSection from '@/components/NumbersSection';
-
+import TrustedFounders from '../components/TrustedFounders';
+import FixedBottomRightButton from '@/components/x';
 const Home = () => {
 	return (
 		<main className='bg-background overflow-x-hidden w-full relative'>
+			<FixedBottomRightButton />
 			<Spotlight /> <Hero />
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-full lg:max-w-5xl'>
 				<NumbersSection />
 				{/* <HowItWorks /> */}
+				<TrustedFounders />
 				<OurWork />
 				<OurApproach />
 				<Process />

@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Logo from './Logo';
-import { useState, } from 'react';
+import { useState } from 'react';
 import {
 	motion,
 	AnimatePresence,
@@ -10,7 +10,7 @@ import {
 } from 'framer-motion';
 const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const { scrollY,  } = useScroll();
+	const { scrollY } = useScroll();
 
 	const width = useTransform(scrollY, [0, 100], ['70%', '50%']);
 
@@ -20,8 +20,8 @@ const NavBar = () => {
 	const borderWidth = useTransform(scrollY, [50, 100], ['0', '1px']);
 
 	const navLinks = [
+		{ href: '/#achivements', label: 'Achivements' },
 		{ href: '/#our-work', label: 'Our Work' },
-		{ href: '/#approach', label: 'Our Approach' },
 		{ href: '/#our-process', label: 'Our Process' },
 		{ href: '/#meet-founder', label: 'Our Founder' },
 		{ href: '/#pricing', label: 'Pricing' },
@@ -60,7 +60,7 @@ const NavBar = () => {
 							</Link>
 						))}
 						<Link
-							href='https://cal.com/launpad-labs/mvp-discussion'
+							href='https://cal.com/launchpad-labs'
 							target='_blank'
 							className='bg-white px-4 py-1.5 rounded-full text-sm hover:scale-105 font-semibold hover:bg-foreground text-black transition-all duration-300 shadow-md flex items-center justify-center'
 						>
@@ -127,7 +127,7 @@ const NavBar = () => {
 								</Link>
 							))}
 							<Link
-								href='https://cal.com/launpad-labs/mvp-discussion'
+								href='https://cal.com/launchpad-labs'
 								target='_blank'
 								onClick={() => setIsMenuOpen(false)}
 								className='w-full rounded-full bg-[#3DD6B5] text-black hover:bg-[#3DD6B5]/90 text-center py-2'

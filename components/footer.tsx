@@ -2,13 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import {
-	IconBrandTwitter,
-	IconBrandLinkedin,
-} from '@tabler/icons-react';
+import { IconBrandTwitter, IconBrandLinkedin } from '@tabler/icons-react';
 import Logo from './Logo';
 
-const 	Footer = () => {
+const Footer = () => {
 	return (
 		<div className='relative border-t border-white/[0.1] px-8 bg-black w-full overflow-hidden mx-auto max-w-7xl'>
 			<div className='absolute bottom-full left-1/2 -translate-x-1/2 -mb-px flex h-8 items-end overflow-hidden'>
@@ -83,7 +80,7 @@ const 	Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='https://cal.com/launpad-labs/mvp-discussion'
+										href='https://cal.com/launchpad-labs'
 										target='_blank'
 									>
 										Book a Call
@@ -92,7 +89,7 @@ const 	Footer = () => {
 								<li>
 									<a
 										className='hover:text-white transition-colors'
-										href='mailto:hello@linkverse.dev'
+										href='mailto:harsh@thelaunchpadlabs.com'
 									>
 										Email Us
 									</a>

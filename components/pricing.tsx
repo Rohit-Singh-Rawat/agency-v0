@@ -80,9 +80,9 @@ const pricingCards: PricingCardProps[] = [
 			className: 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/30',
 		},
 		title: 'MVP Development Package',
-		price: 'Starting at $2000',
+		price: 'Starting at $4999',
 		subtitle: {
-			text: 'Complete MVP delivered in just 4–5 weeks',
+			text: 'Complete MVP delivered in just 2 weeks',
 			className: 'text-indigo-300',
 		},
 		cta: {
@@ -168,7 +168,7 @@ const pricingCards: PricingCardProps[] = [
 			className: 'bg-gray-500/20 text-gray-700 border border-gray-500/30',
 		},
 		title: 'Continuous Growth Package',
-		price: '$2200/month',
+		price: '$3999/month',
 		subtitle: {
 			text: 'No long-term commitment',
 			className: 'text-gray-700',
@@ -260,7 +260,13 @@ function PricingCard({
 }: PricingCardProps) {
 	return (
 		<div
-			className={`${popular ? 'bg-[#111111]' : 'bg-white'} hover:scale-105 transition-all duration-500 border-2 shadow-inner ${popular ? 'shadow-black/20 border-[#222222] ' : 'shadow-gray-100/20 border-neutral-300'} rounded-xl overflow-hidden relative h-full grid grid-rows-[auto_auto_1fr_auto]`}
+			className={`${
+				popular ? 'bg-[#111111]' : 'bg-white'
+			} hover:scale-105 transition-all duration-500 border-2 shadow-inner ${
+				popular
+					? 'shadow-black/20 border-[#222222] '
+					: 'shadow-gray-100/20 border-neutral-300'
+			} rounded-xl overflow-hidden relative h-full grid grid-rows-[auto_auto_1fr_auto]`}
 		>
 			{/* Label Badge */}
 			<div
@@ -278,7 +284,11 @@ function PricingCard({
 				</span>
 				<div className='flex items-center gap-4 mb-3 sm:mb-4'>
 					<div>
-						<h3 className={`text-xl sm:text-2xl font-semibold ${popular ? 'text-white' : 'text-black'}`}>
+						<h3
+							className={`text-xl sm:text-2xl font-semibold ${
+								popular ? 'text-white' : 'text-black'
+							}`}
+						>
 							{title}
 						</h3>
 					</div>
@@ -287,11 +297,19 @@ function PricingCard({
 				{/* Price and Tagline */}
 				<div className='mb-3 sm:mb-4'>
 					<div className='flex items-center mb-2'>
-						<span className={`text-3xl sm:text-4xl font-bold ${popular ? 'text-white' : 'text-black'}`}>
+						<span
+							className={`text-3xl sm:text-4xl font-bold ${
+								popular ? 'text-white' : 'text-black'
+							}`}
+						>
 							{price}
 						</span>
 					</div>
-					<div className={`text-xs sm:text-sm ${popular ? 'text-gray-300' : 'text-gray-600'}`}>
+					<div
+						className={`text-xs sm:text-sm ${
+							popular ? 'text-gray-300' : 'text-gray-600'
+						}`}
+					>
 						{subtitle.text}
 					</div>
 				</div>
@@ -299,7 +317,11 @@ function PricingCard({
 
 			{/* Features Title - Row 2 */}
 			<div className='px-4 sm:px-6'>
-				<h4 className={`${popular ? 'text-gray-300' : 'text-gray-800'} font-medium mb-3 sm:mb-4 text-base sm:text-lg`}>
+				<h4
+					className={`${
+						popular ? 'text-gray-300' : 'text-gray-800'
+					} font-medium mb-3 sm:mb-4 text-base sm:text-lg`}
+				>
 					{featuresTitle}
 				</h4>
 			</div>
@@ -319,7 +341,11 @@ function PricingCard({
 
 				<div className='mt-auto pt-4'>
 					{limitedAvailability && (
-						<div className={`text-sm ${popular ? 'text-amber-400' : 'text-amber-600'} font-medium`}>
+						<div
+							className={`text-sm ${
+								popular ? 'text-amber-400' : 'text-amber-600'
+							} font-medium`}
+						>
 							⚡ {limitedAvailability}
 						</div>
 					)}
@@ -329,7 +355,7 @@ function PricingCard({
 			{/* CTA Button - Row 4 */}
 			<div className='px-4 sm:px-6 pb-4 sm:pb-6 mt-auto'>
 				<a
-					href='https://cal.com/launpad-labs/mvp-discussion'
+					href='https://cal.com/launchpad-labs'
 					target='_blank'
 					className={`block w-full ${cta.className} py-2 sm:py-3 rounded-lg font-medium text-center transition-colors text-sm sm:text-base`}
 				>
@@ -340,14 +366,30 @@ function PricingCard({
 	);
 }
 
-function FeatureItem({ text, icon, isWhiteCard }: { text: string; icon?: React.ReactNode; isWhiteCard?: boolean }) {
+function FeatureItem({
+	text,
+	icon,
+	isWhiteCard,
+}: {
+	text: string;
+	icon?: React.ReactNode;
+	isWhiteCard?: boolean;
+}) {
 	return (
 		<li className='flex items-center gap-2 sm:gap-3 text-sm sm:text-base'>
 			<div className='flex-shrink-0'>
 				<div
-					className={`rounded-lg border flex items-center justify-center ${isWhiteCard ? 'border-gray-300' : 'border-white/30'} p-1 relative overflow-hidden`}
+					className={`rounded-lg border flex items-center justify-center ${
+						isWhiteCard ? 'border-gray-300' : 'border-white/30'
+					} p-1 relative overflow-hidden`}
 				>
-					<div className={`absolute inset-0 ${isWhiteCard ? 'bg-gradient-to-br from-gray-100/50 to-transparent' : 'bg-gradient-to-br from-white/10 to-transparent'} pointer-events-none`}></div>
+					<div
+						className={`absolute inset-0 ${
+							isWhiteCard
+								? 'bg-gradient-to-br from-gray-100/50 to-transparent'
+								: 'bg-gradient-to-br from-white/10 to-transparent'
+						} pointer-events-none`}
+					></div>
 					<span className='w-4 h-4 sm:w-5 sm:h-5 relative z-10 flex items-center justify-center'>
 						{icon || (
 							<IconCheck
@@ -359,7 +401,11 @@ function FeatureItem({ text, icon, isWhiteCard }: { text: string; icon?: React.R
 					</span>
 				</div>
 			</div>
-			<span className={`${isWhiteCard ? 'text-gray-700' : 'text-gray-300'} text-sm`}>{text}</span>
+			<span
+				className={`${isWhiteCard ? 'text-gray-700' : 'text-gray-300'} text-sm`}
+			>
+				{text}
+			</span>
 		</li>
 	);
 }

@@ -207,7 +207,7 @@ const HeroSection = () => {
 									<span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75'></span>
 									<span className='relative inline-flex size-1.5 xs:size-2 sm:size-3 rounded-full bg-green-500'></span>
 								</span>
-								Available for new projects
+								2 slots available for June
 							</AnimatedHeading>
 							<div className='relative'>
 								<FloatingIcons isInView={isInView} />
@@ -251,7 +251,7 @@ const HeroSection = () => {
 								className='flex justify-center'
 							>
 								<Link
-									href='https://calendly.com/vishnoiabhishek29/30min'
+									href='https://cal.com/launchpad-labs'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='px-8 py-3 w-1/2 h-12 rounded-full border ring ring-border/50 border-blue-500/70 bg-[radial-gradient(35%_63%_at_50%_50%,_#60a5fa_0%,_#3b82f6_100%)] shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),_0_4px_10px_rgba(96,165,250,0.3)] transition-all duration-300 hover:shadow-[inset_0_1px_5px_rgba(255,255,255,0.4),_0_6px_15px_rgba(96,165,250,0.4)] hover:brightness-110 active:scale-[0.98] md:w-fit flex text-center items-center justify-center'
